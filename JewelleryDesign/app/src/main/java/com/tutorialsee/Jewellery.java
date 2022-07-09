@@ -28,50 +28,46 @@ import java.util.ArrayList;
 
 public class Jewellery extends Fragment {
 	Context context;
-	LinearLayout filter,sort,click;
+	LinearLayout filter, sort, click;
 	GridView jewelleryGridView;
 	ArrayList<JewelleryModel> JewelleryModelArrayList;
-	
+
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		MainActivity.lp = 2;
 		JewelleryModelArrayList = new ArrayList<JewelleryModel>();
 
-		JewelleryModelArrayList.add(new JewelleryModel("DSA", R.drawable.b1,"lorem ipsium"));
-		JewelleryModelArrayList.add(new JewelleryModel("JAVA", R.drawable.b2 ,"lorem ipsium"));
-		JewelleryModelArrayList.add(new JewelleryModel("C++", R.drawable.b3,"lorem ipsium"));
-		JewelleryModelArrayList.add(new JewelleryModel("Python", R.drawable.b4,"lorem ipsium"));
-		JewelleryModelArrayList.add(new JewelleryModel("Javascript", R.drawable.b5,"lorem ipsium"));
-		JewelleryModelArrayList.add(new JewelleryModel("DSA", R.drawable.b6,"lorem ipsium"));
-		JewelleryModelArrayList.add(new JewelleryModel("DSA", R.drawable.b1,"lorem ipsium"));
-		JewelleryModelArrayList.add(new JewelleryModel("JAVA", R.drawable.b2 ,"lorem ipsium"));
-		JewelleryModelArrayList.add(new JewelleryModel("C++", R.drawable.b3,"lorem ipsium"));
-		JewelleryModelArrayList.add(new JewelleryModel("Python", R.drawable.b4,"lorem ipsium"));
-		JewelleryModelArrayList.add(new JewelleryModel("Javascript", R.drawable.b5,"lorem ipsium"));
-		JewelleryModelArrayList.add(new JewelleryModel("DSA", R.drawable.b6,"lorem ipsium"));
-
+		JewelleryModelArrayList.add(new JewelleryModel("DSA", R.drawable.b1, "lorem ipsium", "b1a"));
+		JewelleryModelArrayList.add(new JewelleryModel("JAVA", R.drawable.b2, "lorem ipsium", "b2a"));
+		JewelleryModelArrayList.add(new JewelleryModel("C++", R.drawable.b3, "lorem ipsium", "b3a"));
+		JewelleryModelArrayList.add(new JewelleryModel("Python", R.drawable.b4, "lorem ipsium", "b4a"));
+		JewelleryModelArrayList.add(new JewelleryModel("Javascript", R.drawable.b5, "lorem ipsium", "b5a"));
+		JewelleryModelArrayList.add(new JewelleryModel("DSA", R.drawable.b6, "lorem ipsium", "b6a"));
+		JewelleryModelArrayList.add(new JewelleryModel("DSA", R.drawable.b1, "lorem ipsium", "b1a"));
+		JewelleryModelArrayList.add(new JewelleryModel("JAVA", R.drawable.b2, "lorem ipsium", "b2a"));
+		JewelleryModelArrayList.add(new JewelleryModel("C++", R.drawable.b3, "lorem ipsium", "b3a"));
+		JewelleryModelArrayList.add(new JewelleryModel("Python", R.drawable.b4, "lorem ipsium", "b4a"));
+		JewelleryModelArrayList.add(new JewelleryModel("Javascript", R.drawable.b5, "lorem ipsium", "b5a"));
+		JewelleryModelArrayList.add(new JewelleryModel("DSA", R.drawable.b6, "lorem ipsium", "b6a"));
 
 	}
-	
-	
-	public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
+
+	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		View v = inflater.inflate(R.layout.jewellery_list, container, false);
 		MainActivity.actionBar.show();
 		context = container.getContext();
 
+		jewelleryGridView = v.findViewById(R.id.idGridView);
 
-		jewelleryGridView =   v.findViewById(R.id.idGridView);
-
-
-		Jewellery_Adapter adapter = new Jewellery_Adapter(getActivity().getApplicationContext(), JewelleryModelArrayList);
+		Jewellery_Adapter adapter = new Jewellery_Adapter(getActivity().getApplicationContext(),
+				JewelleryModelArrayList);
 		jewelleryGridView.setAdapter(adapter);
-
 
 		jewelleryGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 			@Override
 			public void onItemClick(AdapterView<?> parent, View v,
-									int position, long id) {
+					int position, long id) {
 
 				// DO something
 
@@ -84,112 +80,108 @@ public class Jewellery extends Fragment {
 			}
 		});
 
-//		sort = (LinearLayout) v.findViewById(R.id.sort);
-//		filter = (LinearLayout) v.findViewById(R.id.filter);
-//
-//		click = (LinearLayout) v.findViewById(R.id.click);
-//		click.setOnClickListener(new OnClickListener() {
-//
-//			@Override
-//			public void onClick(View arg0) {
-//				Fragment newContent = new ProductDetails();
-//				if (newContent != null) {
-//					switchFragment(newContent);
-//				}
-//
-//			}
-//		});
-//		filter.setOnClickListener(new OnClickListener() {
-//
-//			@Override
-//			public void onClick(View arg0) {
-//				ViewDialog alert = new ViewDialog();
-//				alert.showDialog(getActivity(), "Error de conexi�n al servidor");
-//
-//
-//			}
-//		});
-//		sort.setOnClickListener(new OnClickListener() {
-//
-//			@Override
-//			public void onClick(View arg0) {
-//				ViewDialogs alerts = new ViewDialogs();
-//				alerts.showDialog(getActivity(), "Error de conexi�n al servidor");
-//
-//
-//			}
-//		});
-//
+		// sort = (LinearLayout) v.findViewById(R.id.sort);
+		// filter = (LinearLayout) v.findViewById(R.id.filter);
+		//
+		// click = (LinearLayout) v.findViewById(R.id.click);
+		// click.setOnClickListener(new OnClickListener() {
+		//
+		// @Override
+		// public void onClick(View arg0) {
+		// Fragment newContent = new ProductDetails();
+		// if (newContent != null) {
+		// switchFragment(newContent);
+		// }
+		//
+		// }
+		// });
+		// filter.setOnClickListener(new OnClickListener() {
+		//
+		// @Override
+		// public void onClick(View arg0) {
+		// ViewDialog alert = new ViewDialog();
+		// alert.showDialog(getActivity(), "Error de conexi�n al servidor");
+		//
+		//
+		// }
+		// });
+		// sort.setOnClickListener(new OnClickListener() {
+		//
+		// @Override
+		// public void onClick(View arg0) {
+		// ViewDialogs alerts = new ViewDialogs();
+		// alerts.showDialog(getActivity(), "Error de conexi�n al servidor");
+		//
+		//
+		// }
+		// });
+		//
 		return v;
 	}
 
-
 	public class ViewDialog {
 
-	    public void showDialog(Activity activity, String msg){
-	        final Dialog dialog = new Dialog(activity);
-	        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-	        dialog.setCancelable(false);
-	        dialog.setContentView(R.layout.filter);
+		public void showDialog(Activity activity, String msg) {
+			final Dialog dialog = new Dialog(activity);
+			dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+			dialog.setCancelable(false);
+			dialog.setContentView(R.layout.filter);
 
-	        TextView text = (TextView) dialog.findViewById(R.id.cancle);
-	        //text.setText(msg);
+			TextView text = (TextView) dialog.findViewById(R.id.cancle);
+			// text.setText(msg);
 
-	        Button dialogButton = (Button) dialog.findViewById(R.id.btnLogin);
-	        dialogButton.setOnClickListener(new OnClickListener() {
-	            @Override
-	            public void onClick(View v) {
-	               // dialog.dismiss();
-	            }
-	        });
-	        text.setOnClickListener(new OnClickListener() {
-	            @Override
-	            public void onClick(View v) {
-	                dialog.dismiss();
-	            }
-	        });
+			Button dialogButton = (Button) dialog.findViewById(R.id.btnLogin);
+			dialogButton.setOnClickListener(new OnClickListener() {
+				@Override
+				public void onClick(View v) {
+					// dialog.dismiss();
+				}
+			});
+			text.setOnClickListener(new OnClickListener() {
+				@Override
+				public void onClick(View v) {
+					dialog.dismiss();
+				}
+			});
 
-	        
-	        dialog.show();
+			dialog.show();
 
-	    }
+		}
 	}
-	
-	
+
 	public class ViewDialogs {
 
-	    public void showDialog(Activity activity, String msg){
-	        final Dialog dialog = new Dialog(activity);
-	        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-	        dialog.setCancelable(false);
-	        dialog.setContentView(R.layout.sort);
+		public void showDialog(Activity activity, String msg) {
+			final Dialog dialog = new Dialog(activity);
+			dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+			dialog.setCancelable(false);
+			dialog.setContentView(R.layout.sort);
 
-	       // TextView text = (TextView) dialog.findViewById(R.id.text_dialog);
-	        //text.setText(msg);
+			// TextView text = (TextView) dialog.findViewById(R.id.text_dialog);
+			// text.setText(msg);
 
-	        Button dialogButton = (Button) dialog.findViewById(R.id.btnLogin);
-	        dialogButton.setOnClickListener(new OnClickListener() {
-	            @Override
-	            public void onClick(View v) {
-	                dialog.dismiss();
-	            }
-	        });
+			Button dialogButton = (Button) dialog.findViewById(R.id.btnLogin);
+			dialogButton.setOnClickListener(new OnClickListener() {
+				@Override
+				public void onClick(View v) {
+					dialog.dismiss();
+				}
+			});
 
-	        dialog.show();
+			dialog.show();
 
-	    }
+		}
 	}
-	
-	
+
 	private void switchFragment(Fragment fragment) {
-		getActivity(). getSupportFragmentManager().beginTransaction()
-		.replace(R.id.content_frame, fragment)
-		.addToBackStack("my_fragment").commitAllowingStateLoss();
+		getActivity().getSupportFragmentManager().beginTransaction()
+				.replace(R.id.content_frame, fragment)
+				.addToBackStack("my_fragment").commitAllowingStateLoss();
 	}
 
 	public void onBackPressed() {
 		if (getFragmentManager().getBackStackEntryCount() > 0) {
 			getFragmentManager().popBackStack();
-		} 
+		}
 	}
 }

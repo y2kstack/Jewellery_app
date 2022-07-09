@@ -8,11 +8,13 @@ public class JewelleryModel {
     private String course_name;
     private int imgId;
     private String desc;
+    private String prodId;
 
-    public JewelleryModel(String course_name, int imgId, String desc) {
+    public JewelleryModel(String course_name, int imgId, String desc, String prodId) {
         this.course_name = course_name;
         this.imgId = imgId;
         this.desc = desc;
+        this.prodId = prodId;
 
     }
 
@@ -41,5 +43,12 @@ public class JewelleryModel {
     }
 
 
+    public String getProdId() {
+        return prodId;
+    }
+
+    public void setProdId(String prodId) {
+        this.desc = prodId;
+    }
 
 }

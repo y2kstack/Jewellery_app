@@ -159,6 +159,14 @@
                 android:text="Zip / Pin Code: 713322"
                 android:textColor="@color/black"
                 android:textSize="13sp" />
+
+                  <TextView
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginTop="2dp"
+                      android:text="Email: AnuAnki@gmail.com"
+                      android:textColor="@color/black"
+                      android:textSize="13sp" />
              </LinearLayout>
             </ScrollView>
        

@@ -48,6 +48,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
 @SuppressLint({ "SetJavaScriptEnabled", "SimpleDateFormat" })
 public class ProductDetails extends Fragment implements OnClickListener,
 		OnItemSelectedListener {
@@ -65,7 +66,7 @@ public class ProductDetails extends Fragment implements OnClickListener,
 	//Product_Adapter p_adap;
 	TextView _txt_name, _txt_rs, txt_webviewtext, txt_costrs;
 	private WebView wbView, wbview1, wbview2;
-	Boolean back = false;
+	boolean back = false;
 	static String msg = "";
 	//ItemDetails mItems;
 	int flag = 1;
@@ -104,6 +105,8 @@ public class ProductDetails extends Fragment implements OnClickListener,
 					ARG_DETIALS_ID);
 
 		}*/
+
+
 	}
 
 	@SuppressWarnings({ "unused", "deprecation" })
@@ -115,6 +118,19 @@ public class ProductDetails extends Fragment implements OnClickListener,
 
 		MainActivity.actionBar.show();
 		context = container.getContext();
+
+//		back = (ImageView) v.findViewById(R.id.back);
+//		back.setOnClickListener(new OnClickListener() {
+//
+//			@Override
+//			public void onClick(View arg0) {
+//				onBackPressed();
+//
+//			}
+//		});
+//
+
+
 		//PrefernceSettings.openDataBase(context);
 
 		/*String tt = mItems.getImagePath1();
@@ -154,8 +170,31 @@ public class ProductDetails extends Fragment implements OnClickListener,
 		
 		imageviewnew = (ImageView) v.findViewById(R.id.imageviewnew);
 
+		TextView productidview = (TextView) v.findViewById(R.id.dsfdfgf);
+
+		TextView productDesc = (TextView) v.findViewById(R.id.textView3);
+
+
 		imageviewnew.setImageResource(jewellery.getimgId());
-		
+
+		productidview.setText("Product Id : " + jewellery.getProdId());
+		productDesc.setText("Product Description : "+ jewellery.getDesc());
+
+		addtocarsst.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// redirect to contact page
+				Fragment newContent = new ContactUs();
+
+				if (newContent != null) {
+					switchFragment(newContent);
+				}
+				
+				
+			}
+		});
+
 //		confim.setOnClickListener(new OnClickListener() {
 //
 //			@Override
@@ -340,6 +379,7 @@ public class ProductDetails extends Fragment implements OnClickListener,
 		txt_costrs.setPaintFlags(txt_costrs.getPaintFlags()
 				| Paint.STRIKE_THRU_TEXT_FLAG);
 		_txt_name.setText(jewellery.getCourse_name());
+		_txt_rs.setText(jewellery.getCourse_name());
 //		_txt_rs.setText(mItems.getPrice());
 //		if (mItems.getCost_Price() != null) {
 //			if (mItems.getCost_Price().charAt(0) == '0') {
