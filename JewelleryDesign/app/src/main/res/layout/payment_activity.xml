@@ -1,0 +1,284 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+
+    <LinearLayout
+        android:id="@+id/lin1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        
+        android:background="@color/white"
+        android:clickable="false"
+        android:orientation="horizontal"
+        android:padding="5dip" >
+
+        <TextView
+            android:id="@+id/txt_billing_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+android:text="Sipping"
+android:drawableTop="@drawable/qwe"   
+android:textColor="@color/ratnajyoti"         
+       android:layout_gravity="center_vertical"
+ />
+
+        <View
+            android:id="@+id/line1"
+            android:layout_width="0.0dip"
+            android:layout_height="1.0dip"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.0"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:background="@color/black_transparent_2" />
+
+        <TextView
+            android:id="@+id/txt_payment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+       android:layout_gravity="center_vertical"
+android:text="Payment"
+android:textColor="@color/ratnajyoti"   
+android:drawableTop="@drawable/qwe"  />
+      
+
+        <View
+            android:id="@+id/line2"
+            android:layout_width="0.0dip"
+            android:layout_height="1.0dip"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.0"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:background="@color/black_transparent_2" />
+
+          <TextView
+            android:id="@+id/txt_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/ratnajyoti"   
+       android:layout_gravity="center_vertical"
+android:text="Thank You"
+android:drawableTop="@drawable/qwesss"  />
+       
+    </LinearLayout>
+
+     <View
+            android:id="@+id/line51"
+            android:layout_width="match_parent"
+            android:layout_height="1.0dip"
+            android:layout_below="@+id/lin1"
+            android:background="@color/black_transparent_2" />
+    <!--
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lin1"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/radioButton1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/txt_namdfeee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CASH ON DELIVERY(COD)"
+                    android:textColor="#000000"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/txt_namdjfeee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pay in cash when the goods are received. Free delivery for porterage"
+                    android:textColor="#6D6A6A"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/radioButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/txt_namdeee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="EBS PAYMENT GATEWAY"
+                    android:textColor="#000000"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/txt_nafmdjfeee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Perform a transfer payment to our account in EBS Account details will be provided after you complete this step."
+                    android:textColor="#6D6A6A"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/radioButton3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/txt_namdejee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PayU PAYMENT GATEWAY"
+                    android:textColor="#000000"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/txt_naSDfmdjfeee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Perform a transfer payment to our account in PayU Account details will be provided after you complete this step."
+                    android:textColor="#6D6A6A"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    -->
+
+    <RelativeLayout
+        android:id="@+id/bottom_panels"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10dp" >
+
+            <TextView
+                android:id="@+id/txt_pyment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/ratnajyoti"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Confirm Order"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/lin1" >
+
+       <!--  <ImageView
+            android:id="@+id/coddd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:background="@null"
+            android:src="@drawable/cod" /> -->
+
+        <RadioButton
+            android:id="@+id/radio0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:layout_marginTop="10dp"
+            android:text="PayPal Payment" />
+
+        <TextView
+            android:id="@+id/txt_namdjfeee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="33dp"
+            android:layout_marginRight="15dp"
+            android:text="Perform a transfer payment to our account in PayPal Account details will be provided after you complete this step."
+            android:textColor="#6D6A6A"
+            android:textSize="12sp" />
+
+       
+
+       <!--  <ImageView
+            android:id="@+id/payumondyddd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="15dp"
+            android:background="@null"
+            android:src="@drawable/payu" /> -->
+
+        <RadioButton
+            android:id="@+id/radio2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="EBS Payment" />
+
+        <TextView
+            android:id="@+id/txt_naSDfmdjfeee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="33dp"
+            android:layout_marginRight="15dp"
+            android:text="Perform a transfer payment to our account in EBS Account details will be provided after you complete this step."
+            android:textColor="#6D6A6A"
+            android:textSize="12sp" />
+    </RadioGroup>
+
+</RelativeLayout>

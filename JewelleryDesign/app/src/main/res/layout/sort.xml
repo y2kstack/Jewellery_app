@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="5dp" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sort By"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/white_dots"
+            android:gravity="center" />
+         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Price,Ascending"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+        
+        
+        
+        </LinearLayout>
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/white_dots"
+            android:gravity="center" />
+         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Price,Descending"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+        
+        
+        
+        </LinearLayout>
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/white_dots"
+            android:gravity="center" />
+         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Weight,Ascending"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+        
+        
+        
+        </LinearLayout>
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/white_dots"
+            android:gravity="center" />
+         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Weight,Descending"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+        
+        
+        
+        </LinearLayout>
+      <LinearLayout
+                android:id="@+id/_rcel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+               android:layout_alignParentBottom="true"
+           android:orientation="horizontal"
+                android:background="@color/white">
+        
+            <TextView
+                android:id="@+id/cancle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Cancle"
+                android:textAllCaps="true"
+                android:background="@drawable/backgroundss"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:layout_marginLeft="100dp"
+                android:layout_weight="20"
+                android:textColor="@color/ratnajyoti"
+                android:padding="5dp"
+                android:textSize="13sp" />
+        
+        <Button
+                        android:id="@+id/btnLogin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                           android:layout_weight=".5"
+                        android:padding="5dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="5dp"
+                           android:textAllCaps="true"
+                        android:background="@drawable/button_borders"
+                        android:text="Apply"
+                        android:textColor="#ffffff"
+                        android:textSize="13sp" />
+          </LinearLayout>
+    </LinearLayout>
+    </LinearLayout>

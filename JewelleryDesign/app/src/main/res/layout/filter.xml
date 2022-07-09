@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+    
+    
+    <LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+  android:padding="20dp"
+  android:background="@color/white"
+    android:orientation="vertical" >
+    
+        
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Filters"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+        
+        
+        
+        
+        
+          <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Astrology consultancy"
+                android:textAllCaps="true"
+                 android:layout_marginTop="30dp"
+                android:textColor="#ffffff"
+                android:padding="3dp"
+                android:background="#38B2D6"
+                android:textSize="10sp" />
+        
+        <Spinner
+                android:id="@+id/spinner1"
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/spinner_background"
+                android:spinnerMode="dropdown" >
+            </Spinner>
+            
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/filters"
+                android:textAllCaps="true"
+                 android:layout_marginTop="30dp"
+                android:textColor="#ffffff"
+                android:padding="3dp"
+                android:background="#38B2D6"
+                android:textSize="10sp" />
+        
+        <Spinner
+                android:id="@+id/spinner2"
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/spinner_background"
+                android:spinnerMode="dropdown" >
+            </Spinner>
+    
+          <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/filterss"
+                android:textAllCaps="true"
+                 android:layout_marginTop="30dp"
+                android:textColor="#ffffff"
+                android:padding="3dp"
+                android:background="#38B2D6"
+                android:textSize="10sp" />
+        
+        <Spinner
+                android:id="@+id/spinner3"
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/spinner_background"
+                android:spinnerMode="dropdown" >
+            </Spinner>
+</LinearLayout>
+
+    
+      <LinearLayout
+                android:id="@+id/_rcel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+               android:layout_alignParentBottom="true"
+           android:orientation="horizontal"
+                android:background="@color/white">
+        
+            <TextView
+                android:id="@+id/cancle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Cancle"
+                android:textAllCaps="true"
+                android:background="@drawable/backgroundss"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:layout_marginLeft="100dp"
+                android:layout_weight="20"
+                android:textColor="@color/ratnajyoti"
+                android:padding="5dp"
+                android:textSize="13sp" />
+        
+        <Button
+                        android:id="@+id/btnLogin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                           android:layout_weight=".5"
+                        android:padding="5dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="20dp"
+                           android:textAllCaps="true"
+                        android:background="@drawable/button_borders"
+                        android:text="Apply"
+                        android:textColor="#ffffff"
+                        android:textSize="13sp" />
+          </LinearLayout>
+    
+</RelativeLayout>

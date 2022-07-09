@@ -1,0 +1,96 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+
+        <item name="colorAccent">@color/colorAccent</item>
+
+
+    </style>
+    <style name="NewDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="android:windowTitleStyle">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="TwoWayView">
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/left_slide_in</item>
+    </style>
+
+    <string-array name="codes">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>26</item>
+        <item>100</item>
+    </string-array>
+    <string-array name="names">
+        <item>S</item>
+        <item>M</item>
+        <item>ML</item>
+        <item>L</item>
+        <item>B</item>
+        <item>30CM X 30CM</item>
+        <item>30CM X 35CM</item>
+        <item>35CM X 35CM</item>
+        <item>40CM X 40CM</item>
+        <item>40CM X 61CM</item>
+        <item>40CM X 122CM</item>
+        <item>61CM X 61CM</item>
+        <item>68CM X 68 CM</item>
+        <item>76CM X 76CM</item>
+        <item>61CM X 105CM</item>
+        <item>Free Size</item>
+        <item>5 MTR</item>
+        <item>XS</item>
+        <item>XL</item>
+        <item>XXL</item>
+        <item>2.5MTR</item>
+        <item>2MTR</item>
+        <item>45CM X 65CM</item>
+        <item></item>
+
+
+
+
+
+
+
+    </string-array>
+
+
+</resources>

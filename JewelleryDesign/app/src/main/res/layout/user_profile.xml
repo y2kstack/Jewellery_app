@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ratnajyoti"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/ddddd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp" >
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".2"
+                android:contentDescription="@drawable/back"
+                android:src="@drawable/back" />
+
+            <TextView
+                android:id="@+id/txtUsername"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="My Profile"
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".2"
+                android:contentDescription="@drawable/edit"
+                android:src="@drawable/edit" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lmlj"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/order"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:contentDescription="@drawable/roundorders"
+                    android:src="@drawable/roundorders" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="My Order"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" >
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/changepassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@drawable/roundlocks"
+                    android:src="@drawable/roundlocks" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Change Password"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" >
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@drawable/roundusers"
+                    android:src="@drawable/roundusers" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Profile"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" >
+                </TextView>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="8"
+        android:background="@color/white"
+        android:orientation="vertical" >
+        <ScrollView
+                android:id="@+id/bottom_panels"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null" >
+        
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical" >
+<TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profile :"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/ratnajyoti"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                android:layout_marginTop="10dp"
+                android:textSize="15sp" >
+            </TextView>
+            
+   
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" 
+            android:layout_marginTop="15dp"
+            android:padding="5dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="User Name :"
+                android:textStyle="bold"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/ratnajyoti"
+                android:textSize="15sp" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="rahul Khandelwal"
+                android:layout_marginLeft="10dp"
+                
+                android:textColor="@color/ratnajyoti"
+                android:textSize="15sp" >
+            </TextView>
+        </LinearLayout>
+         <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" 
+            android:padding="5dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email :"
+                 android:textStyle="bold"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/ratnajyoti"
+                android:textSize="15sp" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="tutorialsee9@gmail.com"
+                android:layout_marginLeft="10dp"
+               
+                android:textColor="@color/ratnajyoti"
+                android:textSize="15sp" >
+            </TextView>
+        </LinearLayout>
+        
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" 
+            android:padding="5dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Full Name :"
+                android:textStyle="bold"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/ratnajyoti"
+                android:textSize="15sp" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/fullname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="rahul Khandelwal"
+                android:layout_marginLeft="10dp"
+                
+                android:textColor="@color/ratnajyoti"
+                android:textSize="15sp" >
+            </TextView>
+        </LinearLayout>
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" 
+            android:padding="5dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mobile :"
+                 android:textStyle="bold"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/ratnajyoti"
+                android:textSize="15sp" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/mobile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+918002547896"
+                android:layout_marginLeft="10dp"
+               
+                android:textColor="@color/ratnajyoti"
+                android:textSize="15sp" >
+            </TextView>
+        </LinearLayout>
+         
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" 
+            android:padding="5dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Country :"
+                android:textStyle="bold"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/ratnajyoti"
+                android:textSize="15sp" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/country"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="India"
+                android:layout_marginLeft="10dp"
+                
+                android:textColor="@color/ratnajyoti"
+                android:textSize="15sp" >
+            </TextView>
+        </LinearLayout>
+         
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" 
+            android:padding="5dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Zip Code :"
+                android:layout_marginLeft="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/ratnajyoti"
+                android:textSize="15sp" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="302018"
+                android:layout_marginLeft="10dp"
+                
+                android:textColor="@color/ratnajyoti"
+                android:textSize="15sp" >
+            </TextView>
+        </LinearLayout>
+         </LinearLayout>
+         </ScrollView>
+         
+    </LinearLayout>
+ 
+ 
+</LinearLayout>

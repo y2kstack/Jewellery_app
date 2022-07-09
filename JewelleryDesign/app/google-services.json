@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "65614015253",
+    "project_id": "anuanki-acd34",
+    "storage_bucket": "anuanki-acd34.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:65614015253:android:f9f654ac2357ee1cd7571c",
+        "android_client_info": {
+          "package_name": "com.tutorialsee"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "65614015253-46b1ea61kcubffoi4k7umkiiubmt1s34.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKoHf1Y9XvdU3BPi02fVRRe0Pi7vgWovY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "65614015253-46b1ea61kcubffoi4k7umkiiubmt1s34.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
