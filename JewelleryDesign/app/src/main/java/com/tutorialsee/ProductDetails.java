@@ -8,13 +8,7 @@ import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
-import org.apache.http.NameValuePair;
-import org.apache.http.message.BasicNameValuePair;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-import com.tutorialsee.R;
-import com.squareup.picasso.Picasso;
+
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.Dialog;
@@ -22,6 +16,8 @@ import android.content.Context;
 import android.graphics.Paint;
 import android.os.AsyncTask;
 import android.os.Bundle;
+
+import androidx.appcompat.app.ActionBar;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
@@ -66,11 +62,12 @@ public class ProductDetails extends Fragment implements OnClickListener,
 	//Product_Adapter p_adap;
 	TextView _txt_name, _txt_rs, txt_webviewtext, txt_costrs;
 	private WebView wbView, wbview1, wbview2;
+	boolean back_a = false;
 	boolean back = false;
 	static String msg = "";
 	//ItemDetails mItems;
 	int flag = 1;
-	ImageView btn_search, btn_logo;
+	ImageView btn_search, btn_logo, backButton;
 	EditText edt_search;
 	String flg = "L";
 	Context context;
@@ -107,6 +104,7 @@ public class ProductDetails extends Fragment implements OnClickListener,
 		}*/
 
 
+
 	}
 
 	@SuppressWarnings({ "unused", "deprecation" })
@@ -116,18 +114,20 @@ public class ProductDetails extends Fragment implements OnClickListener,
 			Bundle savedInstanceState) {
 		View v = inflater.inflate(R.layout.product_details, container, false);
 
-		MainActivity.actionBar.show();
+		MainActivity.actionBar.hide();
 		context = container.getContext();
 
-//		back = (ImageView) v.findViewById(R.id.back);
-//		back.setOnClickListener(new OnClickListener() {
+		backButton = (ImageView) v.findViewById(R.id.backButton);
 //
-//			@Override
-//			public void onClick(View arg0) {
-//				onBackPressed();
 //
-//			}
-//		});
+		backButton.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View arg0) {
+				onBackPressed();
+
+			}
+		});
 //
 
 
