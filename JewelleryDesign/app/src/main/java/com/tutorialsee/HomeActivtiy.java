@@ -52,7 +52,7 @@ public class HomeActivtiy extends Fragment implements ViewPager.OnPageChangeList
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		View v = inflater.inflate(R.layout.home_activtiy, container, false);
+			View v = inflater.inflate(R.layout.home_activtiy, container, false);
 		MainActivity.actionBar.show();
 		context = container.getContext();
 

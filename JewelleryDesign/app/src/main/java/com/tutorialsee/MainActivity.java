@@ -180,7 +180,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener,O
 		mDrawerLayout.setDrawerListener(mDrawerToggle);
 
 		if (savedInstanceState == null) {
-			switchFragment(new HomeActivtiy());
+			switchFragment(new LoginActivity());
 			setSelected(lin15);
 
 		}

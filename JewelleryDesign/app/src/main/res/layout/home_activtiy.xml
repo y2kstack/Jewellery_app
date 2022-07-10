@@ -993,6 +993,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:background="#00AAA0"
+        android:visibility="gone"
         android:orientation="horizontal" >
 
         <LinearLayout

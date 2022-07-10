@@ -4,6 +4,7 @@ import java.text.DateFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import static android.Manifest.permission.CALL_PHONE;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -19,6 +20,7 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
@@ -37,6 +39,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 @SuppressLint({ "SetJavaScriptEnabled", "SimpleDateFormat" })
@@ -54,7 +57,7 @@ public class ProductDetails extends Fragment implements OnClickListener,
 	private ImageView[] dots;
 	private int currentIndex;
 	//Product_Adapter p_adap;
-	TextView _txt_name, _txt_rs, txt_webviewtext,txt_rs, txt_costrs, txt_rs_id, phoneNumber;
+	TextView _txt_name, _txt_rs, txt_webviewtext,txt_rs,emailView, txt_costrs, txt_rs_id, phoneNumber;
 	private WebView wbView, wbview1, wbview2;
 	boolean back_a = false;
 	boolean back = false;
@@ -199,7 +202,7 @@ public class ProductDetails extends Fragment implements OnClickListener,
 
 		phoneNumber = (TextView) v.findViewById(R.id.phoneNumber);
 
-
+		emailView = (TextView) v.findViewById(R.id.emailView);
 
 		txt_rs_id = (TextView) v.findViewById(R.id.txt_rs_id);
 
@@ -211,22 +214,47 @@ public class ProductDetails extends Fragment implements OnClickListener,
 			@Override
 			public void onClick(View v) {
 
-//				String number = ("tel:" + "999999999");
-//				mIntent = new Intent(Intent.ACTION_CALL);
-//				mIntent.setData(Uri.parse(number));
-//// Here, thisActivity is the current activity
-//				if (ContextCompat.checkSelfPermission(thisActivity,
-//						Manifest.permission.CALL_PHONE)
-//						!= PackageManager.PERMISSION_GRANTED) {
-//
-//					ActivityCompat.requestPermissions(thisActivity,
-//							new String[]{Manifest.permission.CALL_PHONE},
-//							MY_PERMISSIONS_REQUEST_CALL_PHONE);
-//
-//					// MY_PERMISSIONS_REQUEST_C
 
+				Intent i = new Intent(Intent.ACTION_DIAL);
+				i.setData(Uri.parse("tel:0612312312"));
 
+				if (ContextCompat.checkSelfPermission(getActivity().getApplicationContext(), CALL_PHONE) == PackageManager.PERMISSION_GRANTED) {
+					startActivity(i);
+				} else {
+					requestPermissions(new String[]{CALL_PHONE}, 1);
 				}
+			}
+		});
+
+
+		emailView.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+
+
+				String[] TO = {"mailto:someone@gmail.com"};
+				String[] CC = {"mailto:xyz@gmail.com"};
+				Intent emailIntent = new Intent(Intent.ACTION_SEND);
+				emailIntent.setData(Uri.parse("mailto:"));
+				emailIntent.setType("text/plain");
+
+
+				emailIntent.putExtra(Intent.EXTRA_EMAIL, TO);
+				emailIntent.putExtra(Intent.EXTRA_CC, CC);
+				emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Your subject");
+				emailIntent.putExtra(Intent.EXTRA_TEXT, "Email message goes here");
+
+				try {
+					startActivity(Intent.createChooser(emailIntent, "Send mail..."));
+
+					Log.i("Finished", "");
+				} catch (android.content.ActivityNotFoundException ex) {
+					Toast.makeText(getActivity().getApplicationContext(),
+							"There is no email client installed.", Toast.LENGTH_SHORT).show();
+				}
+
+
+			}
 		});
 
 

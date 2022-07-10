@@ -242,6 +242,14 @@
                 android:layout_height="wrap_content"
                 android:text="+91999999999"
                 />
+
+
+            <TextView
+                android:id="@+id/emailView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="test@email.com"
+                />
         </LinearLayout>
 
     </LinearLayout>

@@ -4,19 +4,35 @@ import java.lang.ref.WeakReference;
 import java.math.BigInteger;
 import java.security.SecureRandom;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
+import java.util.concurrent.Executor;
 import java.util.regex.Pattern;
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONObject;
 
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.common.api.ApiException;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthCredential;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.GoogleAuthProvider;
 import com.tutorialsee.R;
 
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -35,6 +51,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 public class LoginActivity extends Fragment {
@@ -53,7 +70,7 @@ public class LoginActivity extends Fragment {
 	ImageView back;
 	ArrayList<HashMap<String, String>> array,array1;
 	static String msg = "",mail = "",status;
-
+	private FirebaseAuth mFirebaseAuth;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -62,7 +79,70 @@ public class LoginActivity extends Fragment {
 		wrActivity = new WeakReference<LoginActivity>(this);
 		mActivity = getActivity();
 		mContext = getActivity().getApplicationContext();
+		 mFirebaseAuth = FirebaseAuth.getInstance();
 
+	}
+
+	@Override
+	public void onActivityResult(int requestCode, int resultCode, Intent data) {
+		super.onActivityResult(requestCode, resultCode, data);
+		if (requestCode == 1) {
+			Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
+			try {
+				GoogleSignInAccount account = task.getResult(ApiException.class);
+				firebaseAuthWithGoogle(account);
+			} catch (ApiException e) {
+				Log.d(String.valueOf(e), "error");
+			}
+		}
+	}
+	private void finishF() {
+		Activity activity = (Activity)getContext();
+		activity.finish();
+	}
+
+
+	private void firebaseAuthWithGoogle(GoogleSignInAccount account) {
+
+		AuthCredential credential = GoogleAuthProvider.getCredential(account.getIdToken(),null);
+		mFirebaseAuth.signInWithCredential(credential)
+				.addOnSuccessListener(new OnSuccessListener<AuthResult>() {
+					@Override
+					public void onSuccess(AuthResult authResult) {
+
+
+						FirebaseUser firebaseUser = mFirebaseAuth.getCurrentUser();
+//						updateUI(firebaseUser);
+
+						String uid = firebaseUser.getUid();
+						String email = firebaseUser.getEmail();
+						Uri photo = firebaseUser.getPhotoUrl();
+
+
+
+						if (authResult.getAdditionalUserInfo().isNewUser()){
+							Toast.makeText(getActivity(),"Account created "+email,Toast.LENGTH_SHORT).show();
+
+						}
+						else {
+							Toast.makeText(getActivity(),"Existing user "+email,Toast.LENGTH_SHORT).show();
+
+						}
+
+//						startActivity(new Intent(getActivity(),HomeActivtiy.class));
+						Fragment newContent = new HomeActivtiy();
+						if (newContent != null) {
+							switchFragment(newContent);
+						}
+
+					}
+				})
+				.addOnFailureListener(new OnFailureListener() {
+					@Override
+					public void onFailure(@NonNull Exception e) {
+						Log.d("","aaa");
+					}
+				});
 	}
 
 
@@ -92,23 +172,25 @@ public class LoginActivity extends Fragment {
 		forgetpassword = (TextView) v.findViewById(R.id.forgetpassword);
 		txt_username = (EditText) v.findViewById(R.id.txt_username);
 		txt_password = (EditText) v.findViewById(R.id.txt_password);
-//	txt_code = (EditText) v.findViewById(R.id.txt_code);
+		//	txt_code = (EditText) v.findViewById(R.id.txt_code);
 		btnLogin = (Button) v.findViewById(R.id.btnLogin);
+
+
+		GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+				.requestIdToken(getString(R.string.default_web_client_id))
+				.requestEmail()
+				.build();
+
+		final GoogleSignInClient mSignInClient = GoogleSignIn.getClient(getActivity().getApplicationContext(), gso);
+
+
 		btnLogin.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View arg0) {
-			/*if(Network.isConnectionFast(context)){
-				if(!validate()){
+				Intent signInIntent = mSignInClient.getSignInIntent();
+				startActivityForResult(signInIntent, 1);
 
-						Login msp = new Login();
-						msp.execute();
-
-				}
-			}else{
-				Toast.makeText(getApplicationContext(), "Please check your internet connection", Toast.LENGTH_LONG).show();
-
-			}*/
 			}
 		});
 
