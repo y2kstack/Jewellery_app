@@ -18,10 +18,10 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class Ring extends  Fragment {
+public class Ring extends Fragment {
 
     Context context;
-    LinearLayout filter,sort,click;
+    LinearLayout filter, sort, click;
     GridView jewelleryGridView;
     ArrayList<JewelleryModel> JewelleryModelArrayList;
 
@@ -32,39 +32,60 @@ public class Ring extends  Fragment {
 
         JewelleryModelArrayList = new ArrayList<JewelleryModel>();
 
-        JewelleryModelArrayList.add(new JewelleryModel("DSA", R.drawable.r1,"lorem ipsium", "r1a", "r1b"));
-        JewelleryModelArrayList.add(new JewelleryModel("JAVA", R.drawable.r2 ,"lorem ipsium", "r2a", "r2b"));
-        JewelleryModelArrayList.add(new JewelleryModel("C++", R.drawable.r3,"lorem ipsium", "r3a", "r3b"));
-        JewelleryModelArrayList.add(new JewelleryModel("Python", R.drawable.r4,"lorem ipsium", "r4a", "r4b"));
-        JewelleryModelArrayList.add(new JewelleryModel("Javascript", R.drawable.r5,"lorem ipsium", "r5a", "r5b"));
-        JewelleryModelArrayList.add(new JewelleryModel("DSA", R.drawable.r6,"lorem ipsium", "r6a", "r6b"));
-        JewelleryModelArrayList.add(new JewelleryModel("DSA", R.drawable.r7,"lorem ipsium", "r1a", "r1b"));
-        JewelleryModelArrayList.add(new JewelleryModel("JAVA", R.drawable.r8 ,"lorem ipsium", "r2a", "r2b"));
-        JewelleryModelArrayList.add(new JewelleryModel("C++", R.drawable.r9,"lorem ipsium", "r3a", "r3b"));
-        JewelleryModelArrayList.add(new JewelleryModel("Python", R.drawable.r10,"lorem ipsium", "r4a", "r4b"));
-        JewelleryModelArrayList.add(new JewelleryModel("Javascript", R.drawable.r11,"lorem ipsium", "r5a", "r5b"));
-        JewelleryModelArrayList.add(new JewelleryModel("DSA", R.drawable.r12,"lorem ipsium", "r6a", "r6b"));
-
+        JewelleryModelArrayList.add(new JewelleryModel("DSA", R.drawable.r1,
+                "This Silver Zircon Embrace Ring is handcrafted with love, just for YOU! An adorable zircon centerpiece rests on a sparkling gem-studded band, creating a truly gorgeous effect.",
+                "r1a", "r1b"));
+        JewelleryModelArrayList.add(new JewelleryModel("JAVA", R.drawable.r2,
+                "This Silver Zircon Embrace Ring is handcrafted with love, just for YOU! An adorable zircon centerpiece rests on a sparkling gem-studded band, creating a truly gorgeous effect.",
+                "r2a", "r2b"));
+        JewelleryModelArrayList.add(new JewelleryModel("C++", R.drawable.r3,
+                "This Silver Zircon Embrace Ring is handcrafted with love, just for YOU! An adorable zircon centerpiece rests on a sparkling gem-studded band, creating a truly gorgeous effect.",
+                "r3a", "r3b"));
+        JewelleryModelArrayList.add(new JewelleryModel("Python", R.drawable.r4,
+                "This Silver Zircon Embrace Ring is handcrafted with love, just for YOU! An adorable zircon centerpiece rests on a sparkling gem-studded band, creating a truly gorgeous effect.",
+                "r4a", "r4b"));
+        JewelleryModelArrayList.add(new JewelleryModel("Javascript", R.drawable.r5,
+                "This Silver Zircon Embrace Ring is handcrafted with love, just for YOU! An adorable zircon centerpiece rests on a sparkling gem-studded band, creating a truly gorgeous effect.",
+                "r5a", "r5b"));
+        JewelleryModelArrayList.add(new JewelleryModel("DSA", R.drawable.r6,
+                "This Silver Zircon Embrace Ring is handcrafted with love, just for YOU! An adorable zircon centerpiece rests on a sparkling gem-studded band, creating a truly gorgeous effect.",
+                "r6a", "r6b"));
+        JewelleryModelArrayList.add(new JewelleryModel("DSA", R.drawable.r7,
+                "This Silver Zircon Embrace Ring is handcrafted with love, just for YOU! An adorable zircon centerpiece rests on a sparkling gem-studded band, creating a truly gorgeous effect.",
+                "r1a", "r1b"));
+        JewelleryModelArrayList.add(new JewelleryModel("JAVA", R.drawable.r8,
+                "This Silver Zircon Embrace Ring is handcrafted with love, just for YOU! An adorable zircon centerpiece rests on a sparkling gem-studded band, creating a truly gorgeous effect.",
+                "r2a", "r2b"));
+        JewelleryModelArrayList.add(new JewelleryModel("C++", R.drawable.r9,
+                "This Silver Zircon Embrace Ring is handcrafted with love, just for YOU! An adorable zircon centerpiece rests on a sparkling gem-studded band, creating a truly gorgeous effect.",
+                "r3a", "r3b"));
+        JewelleryModelArrayList.add(new JewelleryModel("Python", R.drawable.r10,
+                "This Silver Zircon Embrace Ring is handcrafted with love, just for YOU! An adorable zircon centerpiece rests on a sparkling gem-studded band, creating a truly gorgeous effect.",
+                "r4a", "r4b"));
+        JewelleryModelArrayList.add(new JewelleryModel("Javascript", R.drawable.r11,
+                "This Silver Zircon Embrace Ring is handcrafted with love, just for YOU! An adorable zircon centerpiece rests on a sparkling gem-studded band, creating a truly gorgeous effect.",
+                "r5a", "r5b"));
+        JewelleryModelArrayList.add(new JewelleryModel("DSA", R.drawable.r12,
+                "This Silver Zircon Embrace Ring is handcrafted with love, just for YOU! An adorable zircon centerpiece rests on a sparkling gem-studded band, creating a truly gorgeous effect.",
+                "r6a", "r6b"));
 
     }
 
-
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.jewellery_list, container, false);
         MainActivity.actionBar.show();
         context = container.getContext();
 
-        jewelleryGridView =   v.findViewById(R.id.idGridView);
+        jewelleryGridView = v.findViewById(R.id.idGridView);
 
-
-        Jewellery_Adapter adapter = new Jewellery_Adapter(getActivity().getApplicationContext(), JewelleryModelArrayList);
+        Jewellery_Adapter adapter = new Jewellery_Adapter(getActivity().getApplicationContext(),
+                JewelleryModelArrayList);
         jewelleryGridView.setAdapter(adapter);
-
 
         jewelleryGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View v,
-                                    int position, long id) {
+                    int position, long id) {
 
                 // DO something
 
@@ -77,59 +98,55 @@ public class Ring extends  Fragment {
             }
         });
 
-//        sort = (LinearLayout) v.findViewById(R.id.sort);
-//        filter = (LinearLayout) v.findViewById(R.id.filter);
-//
-//        click = (LinearLayout) v.findViewById(R.id.click);
-//        click.setOnClickListener(new OnClickListener() {
-//
-//            @Override
-//            public void onClick(View arg0) {
-////                Fragment newContent = new ProductDetails();
-////                if (newContent != null) {
-////                    switchFragment(newContent);
-////                }
-//
-//            }
-//        });
-//        filter.setOnClickListener(new OnClickListener() {
-//
-//            @Override
-//            public void onClick(View arg0) {
-////                Jewellery.ViewDialog alert = new Diamond.ViewDialog();
-////                alert.showDialog(getActivity(), "Error de conexi�n al servidor");
-//
-//
-//            }
-//        });
-//        sort.setOnClickListener(new OnClickListener() {
-//
-//            @Override
-//            public void onClick(View arg0) {
-////                Jewellery.ViewDialogs alerts = new Jewellery.ViewDialogs();
-////                alerts.showDialog(getActivity(), "Error de conexi�n al servidor");
-//
-//
-//            }
-//        });
+        // sort = (LinearLayout) v.findViewById(R.id.sort);
+        // filter = (LinearLayout) v.findViewById(R.id.filter);
+        //
+        // click = (LinearLayout) v.findViewById(R.id.click);
+        // click.setOnClickListener(new OnClickListener() {
+        //
+        // @Override
+        // public void onClick(View arg0) {
+        //// Fragment newContent = new ProductDetails();
+        //// if (newContent != null) {
+        //// switchFragment(newContent);
+        //// }
+        //
+        // }
+        // });
+        // filter.setOnClickListener(new OnClickListener() {
+        //
+        // @Override
+        // public void onClick(View arg0) {
+        //// Jewellery.ViewDialog alert = new Diamond.ViewDialog();
+        //// alert.showDialog(getActivity(), "Error de conexi�n al servidor");
+        //
+        //
+        // }
+        // });
+        // sort.setOnClickListener(new OnClickListener() {
+        //
+        // @Override
+        // public void onClick(View arg0) {
+        //// Jewellery.ViewDialogs alerts = new Jewellery.ViewDialogs();
+        //// alerts.showDialog(getActivity(), "Error de conexi�n al servidor");
+        //
+        //
+        // }
+        // });
 
         return v;
     }
 
-
-
-
-
     public class ViewDialog {
 
-        public void showDialog(Activity activity, String msg){
+        public void showDialog(Activity activity, String msg) {
             final Dialog dialog = new Dialog(activity);
             dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
             dialog.setCancelable(false);
             dialog.setContentView(R.layout.filter);
 
             TextView text = (TextView) dialog.findViewById(R.id.cancle);
-            //text.setText(msg);
+            // text.setText(msg);
 
             Button dialogButton = (Button) dialog.findViewById(R.id.btnLogin);
             dialogButton.setOnClickListener(new OnClickListener() {
@@ -145,23 +162,21 @@ public class Ring extends  Fragment {
                 }
             });
 
-
             dialog.show();
 
         }
     }
 
-
     public class ViewDialogs {
 
-        public void showDialog(Activity activity, String msg){
+        public void showDialog(Activity activity, String msg) {
             final Dialog dialog = new Dialog(activity);
             dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
             dialog.setCancelable(false);
             dialog.setContentView(R.layout.sort);
 
             // TextView text = (TextView) dialog.findViewById(R.id.text_dialog);
-            //text.setText(msg);
+            // text.setText(msg);
 
             Button dialogButton = (Button) dialog.findViewById(R.id.btnLogin);
             dialogButton.setOnClickListener(new OnClickListener() {
@@ -176,9 +191,8 @@ public class Ring extends  Fragment {
         }
     }
 
-
     private void switchFragment(Fragment fragment) {
-        getActivity(). getSupportFragmentManager().beginTransaction()
+        getActivity().getSupportFragmentManager().beginTransaction()
                 .replace(R.id.content_frame, fragment)
                 .addToBackStack("my_fragment").commitAllowingStateLoss();
     }

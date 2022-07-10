@@ -38,18 +38,42 @@ public class Diamond extends Fragment {
 
         JewelleryModelArrayList = new ArrayList<JewelleryModel>();
 
-        JewelleryModelArrayList.add(new JewelleryModel("DSA", R.drawable.n1, "lorem ipsium", "n1a", "n1b"));
-        JewelleryModelArrayList.add(new JewelleryModel("JAVA", R.drawable.n2, "lorem ipsium", "n2a", "n2b"));
-        JewelleryModelArrayList.add(new JewelleryModel("C++", R.drawable.n3, "lorem ipsium", "n3a", "n3b"));
-        JewelleryModelArrayList.add(new JewelleryModel("Python", R.drawable.n4, "lorem ipsium", "n4a", "n4b"));
-        JewelleryModelArrayList.add(new JewelleryModel("Javascript", R.drawable.n5, "lorem ipsium", "n5a", "n5b"));
-        JewelleryModelArrayList.add(new JewelleryModel("DSA", R.drawable.n6, "lorem ipsium", "n6a", "n6b"));
-        JewelleryModelArrayList.add(new JewelleryModel("DSA", R.drawable.n7, "lorem ipsium", "n7a", "n7b"));
-        JewelleryModelArrayList.add(new JewelleryModel("JAVA", R.drawable.n8, "lorem ipsium", "n8a", "n8b"));
-        JewelleryModelArrayList.add(new JewelleryModel("C++", R.drawable.n9, "lorem ipsium", "n9a", "n9b"));
-        JewelleryModelArrayList.add(new JewelleryModel("Python", R.drawable.n10, "lorem ipsium", "n10a", "n10b"));
-        JewelleryModelArrayList.add(new JewelleryModel("Javascript", R.drawable.n11, "lorem ipsium", "n11a", "n11b"));
-        JewelleryModelArrayList.add(new JewelleryModel("DSA", R.drawable.n12, "lorem ipsium", "n12a", "n12b"));
+        JewelleryModelArrayList.add(new JewelleryModel("DSA", R.drawable.n1,
+                "Necklace set in 18 Karat Yellow Gold and studded with Baguette Tapered and Round Garnets", "n1a",
+                "n1b"));
+        JewelleryModelArrayList.add(new JewelleryModel("JAVA", R.drawable.n2,
+                "Necklace set in 18 Karat Yellow Gold and studded with Baguette Tapered and Round Garnets", "n2a",
+                "n2b"));
+        JewelleryModelArrayList.add(new JewelleryModel("C++", R.drawable.n3,
+                "Necklace set in 18 Karat Yellow Gold and studded with Baguette Tapered and Round Garnets", "n3a",
+                "n3b"));
+        JewelleryModelArrayList.add(new JewelleryModel("Python", R.drawable.n4,
+                "Necklace set in 18 Karat Yellow Gold and studded with Baguette Tapered and Round Garnets", "n4a",
+                "n4b"));
+        JewelleryModelArrayList.add(new JewelleryModel("Javascript", R.drawable.n5,
+                "Necklace set in 18 Karat Yellow Gold and studded with Baguette Tapered and Round Garnets", "n5a",
+                "n5b"));
+        JewelleryModelArrayList.add(new JewelleryModel("DSA", R.drawable.n6,
+                "Necklace set in 18 Karat Yellow Gold and studded with Baguette Tapered and Round Garnets", "n6a",
+                "n6b"));
+        JewelleryModelArrayList.add(new JewelleryModel("DSA", R.drawable.n7,
+                "Necklace set in 18 Karat Yellow Gold and studded with Baguette Tapered and Round Garnets", "n7a",
+                "n7b"));
+        JewelleryModelArrayList.add(new JewelleryModel("JAVA", R.drawable.n8,
+                "Necklace set in 18 Karat Yellow Gold and studded with Baguette Tapered and Round Garnets", "n8a",
+                "n8b"));
+        JewelleryModelArrayList.add(new JewelleryModel("C++", R.drawable.n9,
+                "Necklace set in 18 Karat Yellow Gold and studded with Baguette Tapered and Round Garnets", "n9a",
+                "n9b"));
+        JewelleryModelArrayList.add(new JewelleryModel("Python", R.drawable.n10,
+                "Necklace set in 18 Karat Yellow Gold and studded with Baguette Tapered and Round Garnets", "n10a",
+                "n10b"));
+        JewelleryModelArrayList.add(new JewelleryModel("Javascript", R.drawable.n11,
+                "Necklace set in 18 Karat Yellow Gold and studded with Baguette Tapered and Round Garnets", "n11a",
+                "n11b"));
+        JewelleryModelArrayList.add(new JewelleryModel("DSA", R.drawable.n12,
+                "Necklace set in 18 Karat Yellow Gold and studded with Baguette Tapered and Round Garnets", "n12a",
+                "n12b"));
 
     }
 

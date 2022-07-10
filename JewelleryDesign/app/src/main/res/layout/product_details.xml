@@ -86,14 +86,14 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/linss63"
                     android:background="#FDFDFD"
-                    android:gravity="center"
+                    android:gravity="start"
                     android:orientation="vertical"
                     android:padding="10dp">
 
                     <ImageView
                         android:id="@+id/imageviewnew"
-                        android:layout_width="230dp"
-                        android:layout_height="230dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
                         android:layout_gravity="center|center_horizontal"
                         android:clickable="false"
                         android:src="@drawable/dummy" />
@@ -140,6 +140,7 @@
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginVertical="16dp"
                         android:orientation="horizontal">
 
                         <TextView
@@ -162,6 +163,34 @@
                             android:textSize="24sp"
                             android:textStyle="bold" />
                     </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="16dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="Description :"
+                            android:textColor="@color/facebook"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginRight="5dp"
+                            android:text="[59762.97 INR]"
+                            android:textColor="@color/ratnajyoti"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
                 </LinearLayout>
 
                 <LinearLayout
@@ -186,17 +215,6 @@
                             android:layout_height="wrap_content"
                             android:orientation="vertical">
 
-                            <TextView
-                                android:id="@+id/textView3"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:padding="10sp"
-                                android:paddingLeft="10sp"
-                                android:paddingTop="10sp"
-                                android:paddingRight="10sp"
-                                android:text="TextView"
-                                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                                android:visibility="visible" />
                         </LinearLayout>
 
                         <TextView
@@ -222,6 +240,7 @@
 
         <LinearLayout
             android:layout_width="401dp"
+            android:layout_marginVertical="24dp"
             android:layout_height="wrap_content">
 
             <TextView

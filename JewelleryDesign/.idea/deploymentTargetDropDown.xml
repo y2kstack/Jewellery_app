@@ -6,12 +6,12 @@
         <type value="RUNNING_DEVICE_TARGET" />
         <deviceKey>
           <Key>
-            <type value="SERIAL_NUMBER" />
-            <value value="RFCRA0S7ZXE" />
+            <type value="VIRTUAL_DEVICE_PATH" />
+            <value value="/Applications/Android Emulator.app/Contents/MacOS/aosp-master-arm64-v8a" />
           </Key>
         </deviceKey>
       </Target>
     </runningDeviceTargetSelectedWithDropDown>
-    <timeTargetWasSelectedWithDropDown value="2022-07-10T10:35:52.465513Z" />
+    <timeTargetWasSelectedWithDropDown value="2022-07-10T18:14:56.941402Z" />
   </component>
 </project>

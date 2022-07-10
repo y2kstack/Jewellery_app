@@ -27,10 +27,10 @@ public class Jewellery_Adapter extends ArrayAdapter<JewelleryModel> {
             listitemView = LayoutInflater.from(getContext()).inflate(R.layout.jewellery_listitem, parent, false);
         }
         JewelleryModel JewelleryModel = getItem(position);
-        TextView courseTV = listitemView.findViewById(R.id.idTVCourse);
+//        TextView courseTV = listitemView.findViewById(R.id.idTVCourse);
         ImageView courseIV = listitemView.findViewById(R.id.idIVcourse);
 //        TextView courseId = listitemView.findViewById(R.id.dsfdfgf);
-        courseTV.setText(JewelleryModel.getCourse_name());
+//        courseTV.setText(JewelleryModel.getCourse_name());
         courseIV.setImageResource(JewelleryModel.getimgId());
         return listitemView;
     }

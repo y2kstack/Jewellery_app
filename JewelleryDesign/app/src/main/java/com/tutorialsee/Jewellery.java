@@ -38,18 +38,18 @@ public class Jewellery extends Fragment {
 		MainActivity.lp = 2;
 		JewelleryModelArrayList = new ArrayList<JewelleryModel>();
 
-		JewelleryModelArrayList.add(new JewelleryModel("Gold Bangle", R.drawable.b1, "lorem ipsium", "b1a", "b1b"));
-		JewelleryModelArrayList.add(new JewelleryModel("Gold ", R.drawable.b2, "lorem ipsium", "b2a", "b2b"));
-		JewelleryModelArrayList.add(new JewelleryModel("C++", R.drawable.b3, "lorem ipsium", "b3a", "b3b"));
-		JewelleryModelArrayList.add(new JewelleryModel("Python", R.drawable.b4, "lorem ipsium", "b4a", "b4b"));
-		JewelleryModelArrayList.add(new JewelleryModel("Javascript", R.drawable.b5, "lorem ipsium", "b5a", "b5b"));
-		JewelleryModelArrayList.add(new JewelleryModel("DSA", R.drawable.b6, "lorem ipsium", "b6a", "b6b"));
-		JewelleryModelArrayList.add(new JewelleryModel("DSA", R.drawable.b7, "lorem ipsium", "b1a", "b1b"));
-		JewelleryModelArrayList.add(new JewelleryModel("JAVA", R.drawable.b8, "lorem ipsium", "b2a", "b2b"));
-		JewelleryModelArrayList.add(new JewelleryModel("C++", R.drawable.b9, "lorem ipsium", "b3a", "b3b"));
-		JewelleryModelArrayList.add(new JewelleryModel("Python", R.drawable.b10, "lorem ipsium", "b4a", "b4b"));
-		JewelleryModelArrayList.add(new JewelleryModel("Javascript", R.drawable.b11, "lorem ipsium", "b5a", "b5b"));
-		JewelleryModelArrayList.add(new JewelleryModel("DSA", R.drawable.b12, "lorem ipsium", "b6a", "b6b"));
+		JewelleryModelArrayList.add(new JewelleryModel("", R.drawable.b1, "Floral Bangle set in 18 Karat Yellow Gold and studded with Baguette Tapered and Round Garnets", "b1a", "b1b"));
+		JewelleryModelArrayList.add(new JewelleryModel("", R.drawable.b2, "Floral Bangle set in 18 Karat Yellow Gold and studded with Baguette Tapered and Round Garnets", "b2a", "b2b"));
+		JewelleryModelArrayList.add(new JewelleryModel("C++", R.drawable.b3, "Floral Bangle set in 18 Karat Yellow Gold and studded with Baguette Tapered and Round Garnets", "b3a", "b3b"));
+		JewelleryModelArrayList.add(new JewelleryModel("Python", R.drawable.b4, "Floral Bangle set in 18 Karat Yellow Gold and studded with Baguette Tapered and Round Garnets", "b4a", "b4b"));
+		JewelleryModelArrayList.add(new JewelleryModel("Javascript", R.drawable.b5, "Floral Bangle set in 18 Karat Yellow Gold and studded with Baguette Tapered and Round Garnets", "b5a", "b5b"));
+		JewelleryModelArrayList.add(new JewelleryModel("DSA", R.drawable.b6, "Floral Bangle set in 18 Karat Yellow Gold and studded with Baguette Tapered and Round Garnets", "b6a", "b6b"));
+		JewelleryModelArrayList.add(new JewelleryModel("DSA", R.drawable.b7, "Floral Bangle set in 18 Karat Yellow Gold and studded with Baguette Tapered and Round Garnets", "b1a", "b1b"));
+		JewelleryModelArrayList.add(new JewelleryModel("JAVA", R.drawable.b8, "Floral Bangle set in 18 Karat Yellow Gold and studded with Baguette Tapered and Round Garnets", "b2a", "b2b"));
+		JewelleryModelArrayList.add(new JewelleryModel("C++", R.drawable.b9, "Floral Bangle set in 18 Karat Yellow Gold and studded with Baguette Tapered and Round Garnets", "b3a", "b3b"));
+		JewelleryModelArrayList.add(new JewelleryModel("Python", R.drawable.b10, "Floral Bangle set in 18 Karat Yellow Gold and studded with Baguette Tapered and Round Garnets", "b4a", "b4b"));
+		JewelleryModelArrayList.add(new JewelleryModel("Javascript", R.drawable.b11, "Floral Bangle set in 18 Karat Yellow Gold and studded with Baguette Tapered and Round Garnets", "b5a", "b5b"));
+		JewelleryModelArrayList.add(new JewelleryModel("DSA", R.drawable.b12, "Floral Bangle set in 18 Karat Yellow Gold and studded with Baguette Tapered and Round Garnets", "b6a", "b6b"));
 
 	}
 
@@ -118,6 +118,8 @@ public class Jewellery extends Fragment {
 		//
 		return v;
 	}
+
+	
 
 	public class ViewDialog {
 
