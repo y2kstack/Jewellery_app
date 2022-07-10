@@ -110,29 +110,7 @@
             android:orientation="horizontal" 
             android:layout_marginTop="15dp"
             android:padding="5dp"
-            >
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="User Name :"
-                android:textStyle="bold"
-                android:layout_marginLeft="10dp"
-                android:textColor="@color/ratnajyoti"
-                android:textSize="15sp" >
-            </TextView>
-
-            <TextView
-                android:id="@+id/name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="rahul Khandelwal"
-                android:layout_marginLeft="10dp"
-                
-                android:textColor="@color/ratnajyoti"
-                android:textSize="15sp" >
-            </TextView>
-        </LinearLayout>
+            />
          <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -167,29 +145,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal" 
             android:padding="5dp"
-            >
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Full Name :"
-                android:textStyle="bold"
-                android:layout_marginLeft="10dp"
-                android:textColor="@color/ratnajyoti"
-                android:textSize="15sp" >
-            </TextView>
-
-            <TextView
-                android:id="@+id/fullname"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="rahul Khandelwal"
-                android:layout_marginLeft="10dp"
-                
-                android:textColor="@color/ratnajyoti"
-                android:textSize="15sp" >
-            </TextView>
-        </LinearLayout>
+            />
           <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -197,15 +153,14 @@
             android:padding="5dp"
             >
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Mobile :"
-                 android:textStyle="bold"
-                android:layout_marginLeft="10dp"
-                android:textColor="@color/ratnajyoti"
-                android:textSize="15sp" >
-            </TextView>
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginLeft="10dp"
+                  android:text="Name :"
+                  android:textColor="@color/ratnajyoti"
+                  android:textSize="15sp"
+                  android:textStyle="bold"></TextView>
 
             <TextView
                 android:id="@+id/mobile"
@@ -224,58 +179,14 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal" 
             android:padding="5dp"
-            >
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Country :"
-                android:textStyle="bold"
-                android:layout_marginLeft="10dp"
-                android:textColor="@color/ratnajyoti"
-                android:textSize="15sp" >
-            </TextView>
-
-            <TextView
-                android:id="@+id/country"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="India"
-                android:layout_marginLeft="10dp"
-                
-                android:textColor="@color/ratnajyoti"
-                android:textSize="15sp" >
-            </TextView>
-        </LinearLayout>
+            />
          
           <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal" 
             android:padding="5dp"
-            >
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Zip Code :"
-                android:layout_marginLeft="10dp"
-                android:textStyle="bold"
-                android:textColor="@color/ratnajyoti"
-                android:textSize="15sp" >
-            </TextView>
-
-            <TextView
-                android:id="@+id/code"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="302018"
-                android:layout_marginLeft="10dp"
-                
-                android:textColor="@color/ratnajyoti"
-                android:textSize="15sp" >
-            </TextView>
-        </LinearLayout>
+            />
          </LinearLayout>
          </ScrollView>
          

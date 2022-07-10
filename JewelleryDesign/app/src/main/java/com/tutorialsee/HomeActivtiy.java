@@ -32,6 +32,7 @@ import android.view.View.OnClickListener;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 
@@ -44,6 +45,7 @@ public class HomeActivtiy extends Fragment implements ViewPager.OnPageChangeList
 	LinearLayout ll;
 	LinearLayout user,mycart,home,Offers,more;
 	ImageView s,ss,sss,ssss, _orddd;
+	TextView email_slide;
 	private FirebaseAuth mFirebaseAuth;
 
 
@@ -76,11 +78,17 @@ public class HomeActivtiy extends Fragment implements ViewPager.OnPageChangeList
 		mycart = (LinearLayout) v.findViewById(R.id.mycart);
 		user = (LinearLayout) v.findViewById(R.id.user);
 
+
 		ImageView profileImage = (ImageView) v.findViewById(R.id._orddd);
 
-		mFirebaseAuth = FirebaseAuth.getInstance();
 
-		FirebaseUser account = mFirebaseAuth.getCurrentUser();
+
+
+//		Picasso.with(getContext())
+//				.load(photo)
+//				.placeholder(android.R.drawable.sym_def_app_icon)
+//				.error(android.R.drawable.sym_def_app_icon)
+//				.into(profileImage);
 //		if (account != null){
 //			//Display User Image from Google Account
 //			//Objects.requireNonNull() prevents getPhotoUrl() from returning a NullPointerException
