@@ -3,7 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="app/src/main/res/layout/about_us_activity.xml" value="0.16485507246376813" />
+        <entry key="app/src/main/res/layout/about_us_activity.xml" value="0.165" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/add_to_cart.xml" value="0.16983695652173914" />
         <entry key="app/src/main/res/layout/base_layout.xml" value="0.16983695652173914" />
@@ -12,7 +12,7 @@
         <entry key="app/src/main/res/layout/cart.xml" value="0.16983695652173914" />
         <entry key="app/src/main/res/layout/category.xml" value="0.16983695652173914" />
         <entry key="app/src/main/res/layout/change_password.xml" value="0.16983695652173914" />
-        <entry key="app/src/main/res/layout/contact_us_activity.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/contact_us_activity.xml" value="0.24414715719063546" />
         <entry key="app/src/main/res/layout/diamond_activity.xml" value="0.1" />
         <entry key="app/src/main/res/layout/earring_activity.xml" value="0.16485507246376813" />
         <entry key="app/src/main/res/layout/edit_profile.xml" value="0.16983695652173914" />

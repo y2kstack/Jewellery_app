@@ -47,43 +47,24 @@
 
                 <LinearLayout
                     android:id="@+id/linss63"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="0.5dp"
                     android:layout_marginBottom="0.5dp"
                     android:background="#FDFDFD"
-                    android:orientation="vertical">
+                    android:orientation="horizontal">
 
                     <LinearLayout
                         android:id="@+id/realtive_titlefdd"
-                        android:layout_width="match_parent"
-                        android:layout_height="200dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_marginLeft="1dp"
                         android:layout_marginRight="1dp"
                         android:background="#FDFDFD"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:id="@+id/imageviewnew"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center_vertical"
-                            android:clickable="false"
-                            android:src="@drawable/dummy" />
-
-                        <TextView
-                            android:id="@+id/dsfdfgf"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:gravity="center"
-                            android:text="Tap Image to Zoom"
-                            android:textColor="#000000"
-                            android:textSize="15sp" />
+                        android:gravity="center|center_vertical">
 
 
                     </LinearLayout>
+
 
                     <TextView
                         android:id="@+id/txt_id"
@@ -109,6 +90,14 @@
                     android:orientation="vertical"
                     android:padding="10dp">
 
+                    <ImageView
+                        android:id="@+id/imageviewnew"
+                        android:layout_width="230dp"
+                        android:layout_height="230dp"
+                        android:layout_gravity="center|center_horizontal"
+                        android:clickable="false"
+                        android:src="@drawable/dummy" />
+
                     <TextView
                         android:id="@+id/txt_name"
                         android:layout_width="wrap_content"
@@ -119,7 +108,7 @@
                         android:text="Green Jewellery"
                         android:textAllCaps="true"
                         android:textColor="#000000"
-                        android:textSize="16sp"
+                        android:textSize="24sp"
                         android:textStyle="bold" />
 
                     <LinearLayout
@@ -133,7 +122,7 @@
                             android:layout_marginLeft="5dp"
                             android:text="Product Id :"
                             android:textColor="@color/facebook"
-                            android:textSize="17sp"
+                            android:textSize="24sp"
                             android:textStyle="bold" />
 
                         <TextView
@@ -144,7 +133,7 @@
                             android:layout_marginRight="5dp"
                             android:text="[59762.97 INR]"
                             android:textColor="@color/ratnajyoti"
-                            android:textSize="17sp"
+                            android:textSize="24sp"
                             android:textStyle="bold" />
                     </LinearLayout>
 
@@ -159,7 +148,7 @@
                             android:layout_marginLeft="5dp"
                             android:text="Type :"
                             android:textColor="@color/facebook"
-                            android:textSize="17sp"
+                            android:textSize="24sp"
                             android:textStyle="bold" />
 
                         <TextView
@@ -170,7 +159,7 @@
                             android:layout_marginRight="5dp"
                             android:text="[59762.97 INR]"
                             android:textColor="@color/ratnajyoti"
-                            android:textSize="17sp"
+                            android:textSize="24sp"
                             android:textStyle="bold" />
                     </LinearLayout>
                 </LinearLayout>
@@ -216,7 +205,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="sans-serif-black"
                             android:text="For order contact"
-                            android:textSize="20sp" />
+                            android:textSize="24sp" />
 
                         <ImageView
                             android:layout_width="48dp"
@@ -232,17 +221,17 @@
         </ScrollView>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="401dp"
             android:layout_height="wrap_content">
 
             <TextView
-                android:id="@+id/textView58"
-                android:layout_width="112dp"
+                android:id="@+id/textView588"
+                android:layout_width="191dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:text="PH Number:"
                 android:textColor="@color/facebook"
-                android:textSize="17sp"
+                android:textSize="24sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -251,21 +240,21 @@
                 android:layout_height="wrap_content"
                 android:text="+91999999999"
                 android:textColor="#3F51B5"
-                android:textSize="16sp" />
+                android:textSize="24sp" />
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="34dp">
+            android:layout_width="398dp"
+            android:layout_height="wrap_content">
 
             <TextView
                 android:id="@+id/textView58"
-                android:layout_width="112dp"
+                android:layout_width="192dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:text="Email Us"
                 android:textColor="@color/facebook"
-                android:textSize="17sp"
+                android:textSize="24sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -274,7 +263,7 @@
                 android:layout_height="36dp"
                 android:fontFamily="sans-serif-black"
                 android:text="test@email.com"
-                android:textSize="16sp" />
+                android:textSize="24sp" />
 
         </LinearLayout>
 

@@ -167,14 +167,14 @@ public class ProductDetails extends Fragment implements OnClickListener,
 		
 		imageviewnew = (ImageView) v.findViewById(R.id.imageviewnew);
 
-		TextView productidview = (TextView) v.findViewById(R.id.dsfdfgf);
+//		TextView productidview = (TextView) v.findViewById(R.id.dsfdfgf);
 
 		TextView productDesc = (TextView) v.findViewById(R.id.textView3);
 
 
 		imageviewnew.setImageResource(jewellery.getimgId());
 
-		productidview.setText("Product Id : " + jewellery.getProdId());
+//		productidview.setText("Product Id : " + jewellery.getProdId());
 		productDesc.setText("Product Description : "+ jewellery.getDesc());
 
 		addtocarsst.setOnClickListener(new OnClickListener() {

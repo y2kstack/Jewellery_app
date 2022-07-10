@@ -17,10 +17,11 @@
     <string name="title_activity_about_us">AboutUs</string>
     <string name="filters">Shape &amp; Cut(All)</string>
     <string name="filterss">Shape&#160;&amp;&#160;Size</string>
-    <string name="s">Anu Anki Founded in 2004, Anu Anki Jewellery has grown to become the largest online retailer of certified Necklace ,Rings,Bangles. Reg Gem Testing and Diamond Gradation Lab .</string>
-    <string name="ss">The company is built on a unique idea choosing an engagement ring doesnt have to be complicated. Diamonds can be simple to understand. Making the right choice can be easy. Anu Anki Jewellery recognizes the best in online customer service as ranked by actual consumers. </string>
-    <string name="sss">At Anu Anki you will find high quality diamonds Gems certified by the most respected independent diamond grading labs. You can create your own jewelry choose the right diamond and we will set it in your favorite earring pendant, or ring design. Every order is guaranteed and returnable within 30 days so you can be sure you made the right decision.</string>
-    <string name="title_activity_shipping">Shipping</string>
+    <string name="s">Anu Anki Founded in 2001 with objective to make beautiful jewellery accessible to customer It is Online Catalouge For Various Ornaments </string>
+    <string name="sss">Customer can check the various ornaments which is made of gold silver ornaments</string>
+    <string name="heading01">Our Mission</string>
+    <string name="headingdesc">Our Mission is to make Customer Assessible to jewellery they are searching for and make them feel special</string>
+    <string name="title_activity_shipping">Our Mission</string>
     <string name="title_activity_payment_activity">Payment_activity</string>
     <string name="title_activity_thank_you">ThankYou</string>
     <string name="billing">Billing&#160;&amp;&#160;Shipping Address</string>
