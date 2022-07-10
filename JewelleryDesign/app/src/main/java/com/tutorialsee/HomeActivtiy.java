@@ -78,6 +78,11 @@ public class HomeActivtiy extends Fragment implements ViewPager.OnPageChangeList
 		mycart = (LinearLayout) v.findViewById(R.id.mycart);
 		user = (LinearLayout) v.findViewById(R.id.user);
 
+		FirebaseUser firebaseUser = mFirebaseAuth.getCurrentUser();
+
+		String email = firebaseUser.getEmail();
+		Uri photo = firebaseUser.getPhotoUrl();
+		String displayName = firebaseUser.getDisplayName();
 
 		ImageView profileImage = (ImageView) v.findViewById(R.id._orddd);
 

@@ -38,8 +38,8 @@ public class Jewellery extends Fragment {
 		MainActivity.lp = 2;
 		JewelleryModelArrayList = new ArrayList<JewelleryModel>();
 
-		JewelleryModelArrayList.add(new JewelleryModel("DSA", R.drawable.b1, "lorem ipsium", "b1a", "b1b"));
-		JewelleryModelArrayList.add(new JewelleryModel("JAVA", R.drawable.b2, "lorem ipsium", "b2a", "b2b"));
+		JewelleryModelArrayList.add(new JewelleryModel("Gold Bangle", R.drawable.b1, "lorem ipsium", "b1a", "b1b"));
+		JewelleryModelArrayList.add(new JewelleryModel("Gold ", R.drawable.b2, "lorem ipsium", "b2a", "b2b"));
 		JewelleryModelArrayList.add(new JewelleryModel("C++", R.drawable.b3, "lorem ipsium", "b3a", "b3b"));
 		JewelleryModelArrayList.add(new JewelleryModel("Python", R.drawable.b4, "lorem ipsium", "b4a", "b4b"));
 		JewelleryModelArrayList.add(new JewelleryModel("Javascript", R.drawable.b5, "lorem ipsium", "b5a", "b5b"));

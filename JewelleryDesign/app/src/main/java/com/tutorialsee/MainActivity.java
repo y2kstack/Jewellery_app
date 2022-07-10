@@ -1,5 +1,8 @@
 package com.tutorialsee;
 
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.firebase.auth.FirebaseAuth;
 import com.tutorialsee.R;
 import com.tutorialsee.cart.dbhelpercart;
@@ -55,6 +58,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener,O
 	public static dbhelpercart dbHelpercart;
 	public static TextView tx;
 	private FirebaseAuth firebaseAuth;
+	GoogleSignInClient gsc;
 
 	@Override
 	public void onResume() {
@@ -90,7 +94,13 @@ public class MainActivity extends AppCompatActivity implements OnClickListener,O
 		lin100 = (RelativeLayout) findViewById(R.id.lin100);
 		firebaseAuth = FirebaseAuth.getInstance();
 
+//
+		GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+				.requestIdToken(getString(R.string.default_web_client_id))
+				.requestEmail()
+				.build();
 
+		  gsc = GoogleSignIn.getClient(this, gso);
 
 
 
@@ -229,6 +239,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener,O
 			@Override
 			public void onClick(View v) {
 				firebaseAuth.signOut();
+				gsc.signOut();
 				Fragment newContent = new LoginActivity();
 				if (newContent != null) {
 					switchFragment(newContent);
