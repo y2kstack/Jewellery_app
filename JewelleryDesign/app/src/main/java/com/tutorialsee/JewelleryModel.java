@@ -1,6 +1,5 @@
 package com.tutorialsee;
 
-
 public class JewelleryModel {
 
     // string course_name for storing course_name
@@ -8,13 +7,15 @@ public class JewelleryModel {
     private String course_name;
     private int imgId;
     private String desc;
+    private String type;
     private String prodId;
 
-    public JewelleryModel(String course_name, int imgId, String desc, String prodId) {
+    public JewelleryModel(String course_name, int imgId, String desc, String prodId, String type) {
         this.course_name = course_name;
         this.imgId = imgId;
         this.desc = desc;
         this.prodId = prodId;
+        this.type = type;
 
     }
 
@@ -42,13 +43,22 @@ public class JewelleryModel {
         this.desc = desc;
     }
 
-
     public String getProdId() {
         return prodId;
     }
 
     public void setProdId(String prodId) {
-        this.desc = prodId;
+        this.prodId = prodId;
     }
+
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
 
 }

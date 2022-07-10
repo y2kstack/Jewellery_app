@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener,O
 		actionBar.setDisplayHomeAsUpEnabled(false);
 		actionBar.setHomeButtonEnabled(true);
 		actionBar.setIcon(R.drawable.listicon);
-		btn_search = ((ImageView) findViewById(R.id.btn_search));
+//		btn_search = ((ImageView) findViewById(R.id.btn_search));
 		btn_close = ((ImageView) findViewById(R.id.btn_close));
 		btn_logo = ((ImageView) findViewById(R.id.btn_logo));
 		img_view = ((ImageView) findViewById(R.id.img_view));
@@ -103,24 +103,24 @@ public class MainActivity extends AppCompatActivity implements OnClickListener,O
 			public void onClick(View v) {
 				btn_logo.setVisibility(View.VISIBLE);
 				btn_card.setVisibility(View.VISIBLE);
-				btn_search.setVisibility(View.VISIBLE);
+//				btn_search.setVisibility(View.VISIBLE);
 				btn_close.setVisibility(View.GONE);
 				autoComplete.setVisibility(View.GONE);
 
 			}
 		});
 
-		btn_search.setOnClickListener(new OnClickListener() {
-
-			@Override
-			public void onClick(View v) {
-				btn_logo.setVisibility(View.GONE);
-				btn_card.setVisibility(View.GONE);
-				btn_search.setVisibility(View.GONE);
-				btn_close.setVisibility(View.VISIBLE);
-				autoComplete.setVisibility(View.VISIBLE);
-			}
-		});
+//		btn_search.setOnClickListener(new OnClickListener() {
+//
+//			@Override
+//			public void onClick(View v) {
+//				btn_logo.setVisibility(View.GONE);
+//				btn_card.setVisibility(View.GONE);
+//				btn_search.setVisibility(View.GONE);
+//				btn_close.setVisibility(View.VISIBLE);
+//				autoComplete.setVisibility(View.VISIBLE);
+//			}
+//		});
 		initMenu();
 		mTitle = mDrawerTitle = getTitle();
 		mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -156,7 +156,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener,O
 				lin4444.setVisibility(View.GONE);
 				btn_logo.setVisibility(View.VISIBLE);
 				btn_card.setVisibility(View.VISIBLE);
-				btn_search.setVisibility(View.VISIBLE);
+//				btn_search.setVisibility(View.VISIBLE);
 				btn_close.setVisibility(View.GONE);
 				autoComplete.setVisibility(View.GONE);
 				autoComplete.setText("");
@@ -168,7 +168,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener,O
 			public void onDrawerOpened(View drawerView) {
 				btn_logo.setVisibility(View.VISIBLE);
 				btn_card.setVisibility(View.VISIBLE);
-				btn_search.setVisibility(View.VISIBLE);
+//				btn_search.setVisibility(View.VISIBLE);
 				btn_close.setVisibility(View.GONE);
 				autoComplete.setVisibility(View.GONE);
 				autoComplete.setText("");

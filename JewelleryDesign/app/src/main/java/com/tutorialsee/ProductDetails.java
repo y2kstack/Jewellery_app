@@ -1,27 +1,24 @@
 package com.tutorialsee;
 
-import java.math.BigDecimal;
 import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
-import android.graphics.Paint;
-import android.os.AsyncTask;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
 
-import androidx.appcompat.app.ActionBar;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
@@ -35,14 +32,11 @@ import android.webkit.WebView;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
-import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 
 @SuppressLint({ "SetJavaScriptEnabled", "SimpleDateFormat" })
@@ -60,7 +54,7 @@ public class ProductDetails extends Fragment implements OnClickListener,
 	private ImageView[] dots;
 	private int currentIndex;
 	//Product_Adapter p_adap;
-	TextView _txt_name, _txt_rs, txt_webviewtext, txt_costrs;
+	TextView _txt_name, _txt_rs, txt_webviewtext,txt_rs, txt_costrs, txt_rs_id, phoneNumber;
 	private WebView wbView, wbview1, wbview2;
 	boolean back_a = false;
 	boolean back = false;
@@ -190,196 +184,55 @@ public class ProductDetails extends Fragment implements OnClickListener,
 				if (newContent != null) {
 					switchFragment(newContent);
 				}
-				
-				
 			}
 		});
 
-//		confim.setOnClickListener(new OnClickListener() {
-//
-//			@Override
-//			public void onClick(View arg0) {
-//			/*	if (MainActivity._ordd.getText().toString().contains("Login")) {
-//
-//					String abc = PrefernceSettings.getUserId();
-//					mItems.setmax(PrefernceSettings.getMax());
-//					showsixe = 0;
-//					try {
-//						showsixe = MainActivity.dbHelpercart
-//								.countRecordbynid(mItems.getNid());
-//					} catch (Exception ex) {
-//					}
-//					MainActivity.dbHelpercart.inserRecord(mItems.getNid(),
-//							mItems.getTitle(), mItems.getThumb_Images(),
-//							Integer.valueOf(PrefernceSettings.getQuantity()),
-//							mItems.getPrice().toString(),
-//							mItems.getSizeselected(), mItems.getmax());
-//					MainActivity.tx.setText(MainActivity.dbHelpercart
-//							.countRecord() + "");
-//
-//					if (!abc.isEmpty()) {
-//						pidtest = (int) mItems.getNid();
-//						quatest = PrefernceSettings.getQuantity();
-//						size_name = (String) mItems.getSizeselected();
-//						Cartcheck ck = new Cartcheck();
-//						ck.execute();
-//					} else {
-//
-//						if (Integer.parseInt(mItems.getmax()) > showsixe) {
-//							Toast toast = Toast.makeText(context,
-//									"Added to Cart", Toast.LENGTH_SHORT);
-//							toast.setGravity(Gravity.CENTER, 0, 0);
-//							toast.show();
-//							Fragment newContent = new CheckOutSecond();
-//							if (newContent != null) {
-//								switchFragment(newContent);
-//							}
-//						} else {
-//							Toast toast = Toast.makeText(context,
-//									"There is only " + mItems.getmax()
-//											+ " items in stock",
-//									Toast.LENGTH_SHORT);
-//							toast.setGravity(Gravity.CENTER, 0, 0);
-//							toast.show();
-//							Fragment newContent = new CheckOutSecond();
-//							if (newContent != null) {
-//								switchFragment(newContent);
-//							}
-//						}
-//
-//					}
-//
-//					try {
-//						InputMethodManager input = (InputMethodManager) getActivity()
-//								.getSystemService(Activity.INPUT_METHOD_SERVICE);
-//						input.hideSoftInputFromWindow(getActivity()
-//								.getCurrentFocus().getWindowToken(), 0);
-//					} catch (Exception e) {
-//						e.printStackTrace();
-//					}
-//
-//					Tracker t = ((GoogleAnalyticsApp) getActivity()
-//							.getApplication())
-//							.getTracker(com.cms.kilol.GoogleAnalyticsApp.TrackerName.APP_TRACKER);
-//					// Build and send timing.
-//					t.send(new HitBuilders.TimingBuilder().setCategory(
-//							getTimingCategory()).build());
-//					HitBuilders.TimingBuilder builder = new HitBuilders.TimingBuilder();
-//
-//				} else {
-//
-//					String abc = PrefernceSettings.getUserId();
-//					mItems.setmax(PrefernceSettings.getMax());
-//					try {
-//						showsixe = MainActivity.dbHelpercart
-//								.countRecordbynid(mItems.getNid());
-//					} catch (Exception ex) {
-//					}
-//					MainActivity.dbHelpercart.inserRecord(mItems.getNid(),
-//							mItems.getTitle(), mItems.getThumb_Images(),
-//							Integer.valueOf(PrefernceSettings.getQuantity()),
-//							mItems.getPrice().toString(),
-//							mItems.getSizeselected(), mItems.getmax());
-//					MainActivity.tx.setText(MainActivity.dbHelpercart
-//							.countRecord() + "");
-//
-//					if (!abc.isEmpty()) {
-//						pidtest = (int) mItems.getNid();
-//						quatest = PrefernceSettings.getQuantity();
-//						size_name = (String) mItems.getSizeselected();
-//						Cartchecks ck = new Cartchecks();
-//						ck.execute();
-//					} else {
-//
-//						if (Integer.parseInt(mItems.getmax()) > showsixe) {
-//							Toast toast = Toast.makeText(context,
-//									"Added to Cart", Toast.LENGTH_SHORT);
-//							toast.setGravity(Gravity.CENTER, 0, 0);
-//							toast.show();
-//							Fragment newContent = new CheckOutSecond();
-//							if (newContent != null) {
-//								switchFragment(newContent);
-//							}
-//						} else {
-//							Toast toast = Toast.makeText(context,
-//									"There is only " + mItems.getmax()
-//											+ " items in stock",
-//									Toast.LENGTH_SHORT);
-//							toast.setGravity(Gravity.CENTER, 0, 0);
-//							toast.show();
-//							Fragment newContent = new CheckOutSecond();
-//							if (newContent != null) {
-//								switchFragment(newContent);
-//							}
-//						}
-//
-//
-//						 * Toast toast = Toast.makeText(context,
-//						 * "Added to Cart", Toast.LENGTH_SHORT);
-//						 * toast.setGravity(Gravity.CENTER, 0, 0); toast.show();
-//						 * Fragment newContent = new CheckOut(); if (newContent
-//						 * != null) { switchFragment(newContent); }
-//
-//					}
-//
-//					try {
-//						InputMethodManager input = (InputMethodManager) getActivity()
-//								.getSystemService(Activity.INPUT_METHOD_SERVICE);
-//						input.hideSoftInputFromWindow(getActivity()
-//								.getCurrentFocus().getWindowToken(), 0);
-//					} catch (Exception e) {
-//						e.printStackTrace();
-//					}
-//
-//					Tracker t = ((GoogleAnalyticsApp) getActivity()
-//							.getApplication())
-//							.getTracker(com.cms.kilol.GoogleAnalyticsApp.TrackerName.APP_TRACKER);
-//					// Build and send timing.
-//					t.send(new HitBuilders.TimingBuilder().setCategory(
-//							getTimingCategory()).build());
-//					HitBuilders.TimingBuilder builder = new HitBuilders.TimingBuilder();
-//
-//				}
-//*/
-//			}
-//		});
-//		imageviewnew.setOnClickListener(new OnClickListener() {
-//
-//			@Override
-//			public void onClick(View v) {
-//				/*MainActivity.btn_close.setVisibility(View.GONE);
-//				MainActivity.autoComplete.setVisibility(View.GONE);
-//				MainActivity.btn_logo.setVisibility(View.VISIBLE);
-//				MainActivity.btn_card.setVisibility(View.VISIBLE);
-//				MainActivity.btn_search.setVisibility(View.VISIBLE);
-//				MainActivity.tx.setVisibility(View.VISIBLE);*/
-//				ViewDialog alert = new ViewDialog();
-//				alert.showDialog(getActivity(), "Error de conexi�n al servidor");
-//
-//			}
-//		});
 
-		
-	
-//		lay.setOnClickListener(this);
-//		_dbtn.setOnClickListener(this);
-//		lay1.setOnClickListener(this);
-//		_dbtn1.setOnClickListener(this);
-//		lay2.setOnClickListener(this);
-//		_dbtn2.setOnClickListener(this);
-	/*	mItems.getNid();
-		mItems.getThumb_Images();
-		mItems.getPrice();
-		mItems.getBody();
-		mItems.getCost_Price();*/
 		_txt_name = (TextView) v.findViewById(R.id.txt_name);
 
-		_txt_rs = (TextView) v.findViewById(R.id.txt_rs);
+		_txt_rs = (TextView) v.findViewById(R.id.txt_rs_id);
+
+		txt_rs = (TextView) v.findViewById(R.id.txt_rs);
 		txt_costrs = (TextView) v.findViewById(R.id.txt_costrs);
-		txt_costrs.setPaintFlags(txt_costrs.getPaintFlags()
-				| Paint.STRIKE_THRU_TEXT_FLAG);
 		_txt_name.setText(jewellery.getCourse_name());
 		_txt_rs.setText(jewellery.getCourse_name());
+
+		phoneNumber = (TextView) v.findViewById(R.id.phoneNumber);
+
+
+
+		txt_rs_id = (TextView) v.findViewById(R.id.txt_rs_id);
+
+		txt_rs_id.setText(jewellery.getProdId());
+
+		txt_rs.setText(jewellery.getType());
+
+		phoneNumber.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+
+//				String number = ("tel:" + "999999999");
+//				mIntent = new Intent(Intent.ACTION_CALL);
+//				mIntent.setData(Uri.parse(number));
+//// Here, thisActivity is the current activity
+//				if (ContextCompat.checkSelfPermission(thisActivity,
+//						Manifest.permission.CALL_PHONE)
+//						!= PackageManager.PERMISSION_GRANTED) {
+//
+//					ActivityCompat.requestPermissions(thisActivity,
+//							new String[]{Manifest.permission.CALL_PHONE},
+//							MY_PERMISSIONS_REQUEST_CALL_PHONE);
+//
+//					// MY_PERMISSIONS_REQUEST_C
+
+
+				}
+		});
+
+
+
+
+
 //		_txt_rs.setText(mItems.getPrice());
 //		if (mItems.getCost_Price() != null) {
 //			if (mItems.getCost_Price().charAt(0) == '0') {

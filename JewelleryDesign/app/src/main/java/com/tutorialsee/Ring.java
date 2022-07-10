@@ -32,18 +32,18 @@ public class Ring extends  Fragment {
 
         JewelleryModelArrayList = new ArrayList<JewelleryModel>();
 
-        JewelleryModelArrayList.add(new JewelleryModel("DSA", R.drawable.r1,"lorem ipsium", "r1a"));
-        JewelleryModelArrayList.add(new JewelleryModel("JAVA", R.drawable.r2 ,"lorem ipsium", "r2a"));
-        JewelleryModelArrayList.add(new JewelleryModel("C++", R.drawable.r3,"lorem ipsium", "r3a"));
-        JewelleryModelArrayList.add(new JewelleryModel("Python", R.drawable.r4,"lorem ipsium", "r4a"));
-        JewelleryModelArrayList.add(new JewelleryModel("Javascript", R.drawable.r5,"lorem ipsium", "r5a"));
-        JewelleryModelArrayList.add(new JewelleryModel("DSA", R.drawable.r6,"lorem ipsium", "r6a"));
-        JewelleryModelArrayList.add(new JewelleryModel("DSA", R.drawable.r1,"lorem ipsium", "r1a"));
-        JewelleryModelArrayList.add(new JewelleryModel("JAVA", R.drawable.r2 ,"lorem ipsium", "r2a"));
-        JewelleryModelArrayList.add(new JewelleryModel("C++", R.drawable.r3,"lorem ipsium", "r3a"));
-        JewelleryModelArrayList.add(new JewelleryModel("Python", R.drawable.r4,"lorem ipsium", "r4a"));
-        JewelleryModelArrayList.add(new JewelleryModel("Javascript", R.drawable.r5,"lorem ipsium", "r5a"));
-        JewelleryModelArrayList.add(new JewelleryModel("DSA", R.drawable.r6,"lorem ipsium", "r6a"));
+        JewelleryModelArrayList.add(new JewelleryModel("DSA", R.drawable.r1,"lorem ipsium", "r1a", "r1b"));
+        JewelleryModelArrayList.add(new JewelleryModel("JAVA", R.drawable.r2 ,"lorem ipsium", "r2a", "r2b"));
+        JewelleryModelArrayList.add(new JewelleryModel("C++", R.drawable.r3,"lorem ipsium", "r3a", "r3b"));
+        JewelleryModelArrayList.add(new JewelleryModel("Python", R.drawable.r4,"lorem ipsium", "r4a", "r4b"));
+        JewelleryModelArrayList.add(new JewelleryModel("Javascript", R.drawable.r5,"lorem ipsium", "r5a", "r5b"));
+        JewelleryModelArrayList.add(new JewelleryModel("DSA", R.drawable.r6,"lorem ipsium", "r6a", "r6b"));
+        JewelleryModelArrayList.add(new JewelleryModel("DSA", R.drawable.r1,"lorem ipsium", "r1a", "r1b"));
+        JewelleryModelArrayList.add(new JewelleryModel("JAVA", R.drawable.r2 ,"lorem ipsium", "r2a", "r2b"));
+        JewelleryModelArrayList.add(new JewelleryModel("C++", R.drawable.r3,"lorem ipsium", "r3a", "r3b"));
+        JewelleryModelArrayList.add(new JewelleryModel("Python", R.drawable.r4,"lorem ipsium", "r4a", "r4b"));
+        JewelleryModelArrayList.add(new JewelleryModel("Javascript", R.drawable.r5,"lorem ipsium", "r5a", "r5b"));
+        JewelleryModelArrayList.add(new JewelleryModel("DSA", R.drawable.r6,"lorem ipsium", "r6a", "r6b"));
 
 
     }
