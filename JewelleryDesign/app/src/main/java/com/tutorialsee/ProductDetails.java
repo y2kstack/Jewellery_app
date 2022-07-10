@@ -216,7 +216,7 @@ public class ProductDetails extends Fragment implements OnClickListener,
 
 
 				Intent i = new Intent(Intent.ACTION_DIAL);
-				i.setData(Uri.parse("tel:0612312312"));
+				i.setData(Uri.parse("tel:+919480888784"));
 
 				if (ContextCompat.checkSelfPermission(getActivity().getApplicationContext(), CALL_PHONE) == PackageManager.PERMISSION_GRANTED) {
 					startActivity(i);

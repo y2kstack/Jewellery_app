@@ -67,7 +67,7 @@ public class LoginActivity extends Fragment {
 	EditText  email,txt_username,txt_password;
 	Button btnLogin;
 	static String  error = "";
-	ImageView back;
+//	ImageView back;
 	ArrayList<HashMap<String, String>> array,array1;
 	static String msg = "",mail = "",status;
 	private FirebaseAuth mFirebaseAuth;
@@ -158,20 +158,20 @@ public class LoginActivity extends Fragment {
 		Log.v("aaaaaaaaa", randomText);
 		captcher.setText(randomText);
 
-		back = (ImageView) v.findViewById(R.id.back);
-		back.setOnClickListener(new OnClickListener() {
+//		back = (ImageView) v.findViewById(R.id.back);
+//		back.setOnClickListener(new OnClickListener() {
+//
+//			@Override
+//			public void onClick(View arg0) {
+//				onBackPressed();
+//
+//			}
+//		});
 
-			@Override
-			public void onClick(View arg0) {
-				onBackPressed();
-
-			}
-		});
-
-		txt_reg = (TextView) v.findViewById(R.id.txt_reg);
-		forgetpassword = (TextView) v.findViewById(R.id.forgetpassword);
-		txt_username = (EditText) v.findViewById(R.id.txt_username);
-		txt_password = (EditText) v.findViewById(R.id.txt_password);
+//		txt_reg = (TextView) v.findViewById(R.id.txt_reg);
+//		forgetpassword = (TextView) v.findViewById(R.id.forgetpassword);
+//		txt_username = (EditText) v.findViewById(R.id.txt_username);
+//		txt_password = (EditText) v.findViewById(R.id.txt_password);
 		//	txt_code = (EditText) v.findViewById(R.id.txt_code);
 		btnLogin = (Button) v.findViewById(R.id.btnLogin);
 
@@ -195,53 +195,53 @@ public class LoginActivity extends Fragment {
 		});
 
 
-		forgetpassword.setOnClickListener(new OnClickListener() {
-
-			@Override
-			public void onClick(View arg0) {
-				dialog = new Dialog(getActivity());
-				dialog.setContentView(R.layout.forgotpass_popup);
-				dialog.setTitle("Forgot Password");
-				TextView save = (TextView) dialog.findViewById(R.id.text6);
-				TextView cancel = (TextView) dialog.findViewById(R.id.text5);
-				email = (EditText) dialog.findViewById(R.id.email);
-				save.setOnClickListener(new OnClickListener() {
-					@Override
-					public void onClick(View v) {
-						//	Add();
-					}
-				});
-				cancel.setOnClickListener(new OnClickListener() {
-					@Override
-					public void onClick(View v) {
-						dialog.dismiss();
-					}
-				});
-
-
-				dialog.show();
-				// Add();
-				//mySpinner = (Spinner)dialog.findViewById(R.id.spinner1);
-				dialog.show();
-				WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
-				lp.copyFrom(dialog.getWindow().getAttributes());
-				lp.width = WindowManager.LayoutParams.MATCH_PARENT;
-				lp.height = WindowManager.LayoutParams.WRAP_CONTENT;
-				dialog.getWindow().setAttributes(lp);
-			}
-		});
-		txt_reg.setOnClickListener(new OnClickListener() {
-
-			@Override
-			public void onClick(View arg0) {
-				Fragment newContent = new Registration();
-				Log.d("changingview", "registration page");
-
-				if (newContent != null) {
-					switchFragment(newContent);
-				}
-			}
-		});
+//		forgetpassword.setOnClickListener(new OnClickListener() {
+//
+//			@Override
+//			public void onClick(View arg0) {
+//				dialog = new Dialog(getActivity());
+//				dialog.setContentView(R.layout.forgotpass_popup);
+//				dialog.setTitle("Forgot Password");
+//				TextView save = (TextView) dialog.findViewById(R.id.text6);
+//				TextView cancel = (TextView) dialog.findViewById(R.id.text5);
+//				email = (EditText) dialog.findViewById(R.id.email);
+//				save.setOnClickListener(new OnClickListener() {
+//					@Override
+//					public void onClick(View v) {
+//						//	Add();
+//					}
+//				});
+//				cancel.setOnClickListener(new OnClickListener() {
+//					@Override
+//					public void onClick(View v) {
+//						dialog.dismiss();
+//					}
+//				});
+//
+//
+//				dialog.show();
+//				// Add();
+//				//mySpinner = (Spinner)dialog.findViewById(R.id.spinner1);
+//				dialog.show();
+//				WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
+//				lp.copyFrom(dialog.getWindow().getAttributes());
+//				lp.width = WindowManager.LayoutParams.MATCH_PARENT;
+//				lp.height = WindowManager.LayoutParams.WRAP_CONTENT;
+//				dialog.getWindow().setAttributes(lp);
+//			}
+//		});
+//		txt_reg.setOnClickListener(new OnClickListener() {
+//
+//			@Override
+//			public void onClick(View arg0) {
+//				Fragment newContent = new Registration();
+//				Log.d("changingview", "registration page");
+//
+//				if (newContent != null) {
+//					switchFragment(newContent);
+//				}
+//			}
+//		});
 
 
 

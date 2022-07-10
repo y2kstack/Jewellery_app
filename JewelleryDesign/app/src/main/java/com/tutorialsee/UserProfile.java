@@ -29,21 +29,21 @@ public class UserProfile extends Fragment {
 		View v = inflater.inflate(R.layout.user_profile, container, false);
 		MainActivity.actionBar.hide();
 		context = container.getContext();
-		edit = (ImageView) v.findViewById(R.id.edit);
+//		edit = (ImageView) v.findViewById(R.id.edit);
 		back = (ImageView) v.findViewById(R.id.back);
-		changepassword = (LinearLayout) v.findViewById(R.id.changepassword);
-		order = (LinearLayout) v.findViewById(R.id.order);
-		order.setOnClickListener(new OnClickListener() {
-
-			@Override
-			public void onClick(View arg0) {
-				Fragment newContent = new OrderActivity();
-				if (newContent != null) {
-					switchFragment(newContent);
-				}
-
-			}
-		});
+//		changepassword = (LinearLayout) v.findViewById(R.id.changepassword);
+//		order = (LinearLayout) v.findViewById(R.id.order);
+//		order.setOnClickListener(new OnClickListener() {
+//
+//			@Override
+//			public void onClick(View arg0) {
+//				Fragment newContent = new OrderActivity();
+//				if (newContent != null) {
+//					switchFragment(newContent);
+//				}
+//
+//			}
+//		});
 		back.setOnClickListener(new OnClickListener() {
 
 			@Override
@@ -52,28 +52,28 @@ public class UserProfile extends Fragment {
 
 			}
 		});
-		changepassword.setOnClickListener(new OnClickListener() {
-
-			@Override
-			public void onClick(View arg0) {
-				Fragment newContent = new ChangePassword();
-				if (newContent != null) {
-					switchFragment(newContent);
-				}
-
-			}
-		});
-		edit.setOnClickListener(new OnClickListener() {
-
-			@Override
-			public void onClick(View arg0) {
-				Fragment newContent = new EditProfile();
-				if (newContent != null) {
-					switchFragment(newContent);
-				}
-
-			}
-		});
+//		changepassword.setOnClickListener(new OnClickListener() {
+//
+//			@Override
+//			public void onClick(View arg0) {
+//				Fragment newContent = new ChangePassword();
+//				if (newContent != null) {
+//					switchFragment(newContent);
+//				}
+//
+//			}
+//		});
+//		edit.setOnClickListener(new OnClickListener() {
+//
+//			@Override
+//			public void onClick(View arg0) {
+//				Fragment newContent = new EditProfile();
+//				if (newContent != null) {
+//					switchFragment(newContent);
+//				}
+//
+//			}
+//		});
 		return v;
 	}
 

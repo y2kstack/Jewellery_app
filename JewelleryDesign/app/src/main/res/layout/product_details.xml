@@ -232,24 +232,50 @@
         </ScrollView>
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="104dp"
-            android:orientation="vertical">
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView58"
+                android:layout_width="112dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="PH Number:"
+                android:textColor="@color/facebook"
+                android:textSize="17sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/phoneNumber"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="+91999999999"
-                />
+                android:textColor="#3F51B5"
+                android:textSize="16sp" />
+        </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="34dp">
+
+            <TextView
+                android:id="@+id/textView58"
+                android:layout_width="112dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="Email Us"
+                android:textColor="@color/facebook"
+                android:textSize="17sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/emailView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="124dp"
+                android:layout_height="36dp"
+                android:fontFamily="sans-serif-black"
                 android:text="test@email.com"
-                />
+                android:textSize="16sp" />
+
         </LinearLayout>
 
     </LinearLayout>

@@ -1,5 +1,6 @@
 package com.tutorialsee;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.tutorialsee.R;
 import com.tutorialsee.cart.dbhelpercart;
 
@@ -20,7 +21,6 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.MenuItem;
@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener,O
 	public static int lp = 0;
 	int flag = 1;
 	static ActionBar actionBar;
-	RelativeLayout lin15,lin2,lin13,lin4444,lin5555,lin555,lin16,lin17,lin6666,lin18,lin7777,lin444,lin21,lin14,lin28,lin666;
+	RelativeLayout lin15,lin2,lin13,lin4444,lin100,lin5555,lin555,lin16,lin17,lin6666,lin18,lin7777,lin444,lin21,lin14,lin28,lin666;
 	public static String CUR_PAGE_TITLE = "Title";
 	public static AutoCompleteTextView autoComplete;
 	@SuppressWarnings("unused")
@@ -54,6 +54,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener,O
 	ImageView btn_logo,img_view,img_videw,img_viddsew,img_vidfdew;
 	public static dbhelpercart dbHelpercart;
 	public static TextView tx;
+	private FirebaseAuth firebaseAuth;
 
 	@Override
 	public void onResume() {
@@ -86,8 +87,15 @@ public class MainActivity extends AppCompatActivity implements OnClickListener,O
 		img_viddsew = ((ImageView) findViewById(R.id.img_viddsew));
 		img_vidfdew = ((ImageView) findViewById(R.id.img_vidfdew));
 		btn_card = ((ImageView) findViewById(R.id.btn_notifcation));
+		lin100 = (RelativeLayout) findViewById(R.id.lin100);
+		firebaseAuth = FirebaseAuth.getInstance();
+
+
+
+
+
 		btn_card.setOnClickListener(new OnClickListener() {
-			
+
 			@Override
 			public void onClick(View arg0) {
 				Fragment newContent = new Notifications();
@@ -96,6 +104,9 @@ public class MainActivity extends AppCompatActivity implements OnClickListener,O
 				}
 			}
 		});
+
+
+
 		autoComplete = ((AutoCompleteTextView) findViewById(R.id.edt_search));
 		
 		btn_close.setOnClickListener(new OnClickListener() {
@@ -110,17 +121,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener,O
 			}
 		});
 
-//		btn_search.setOnClickListener(new OnClickListener() {
-//
-//			@Override
-//			public void onClick(View v) {
-//				btn_logo.setVisibility(View.GONE);
-//				btn_card.setVisibility(View.GONE);
-//				btn_search.setVisibility(View.GONE);
-//				btn_close.setVisibility(View.VISIBLE);
-//				autoComplete.setVisibility(View.VISIBLE);
-//			}
-//		});
+
 		initMenu();
 		mTitle = mDrawerTitle = getTitle();
 		mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -205,6 +206,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener,O
 		lin14 = (RelativeLayout) findViewById(R.id.lin14);
 		lin28 = (RelativeLayout) findViewById(R.id.lin28);
 		lin666 = (RelativeLayout) findViewById(R.id.lin666);
+		lin100 = (RelativeLayout) findViewById(R.id.lin100);
 		lin666.setOnClickListener(this);
 		
 		lin28.setOnClickListener(this);
@@ -222,6 +224,17 @@ public class MainActivity extends AppCompatActivity implements OnClickListener,O
 		lin13.setOnClickListener(this);
 		lin2.setOnClickListener(this);
 		lin15.setOnClickListener(this);
+
+		lin100.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				firebaseAuth.signOut();
+				Fragment newContent = new LoginActivity();
+				if (newContent != null) {
+					switchFragment(newContent);
+				}
+			}
+		});
 
 	}
 
@@ -271,7 +284,6 @@ public class MainActivity extends AppCompatActivity implements OnClickListener,O
 			newContent = new Ring();
 		}else if (v.getId() == R.id.lin2) {
 			newContent = new UserProfile();
-
 		} else if (v.getId() == R.id.lin16) {
 			
 			if (flag % 2 == 0)
@@ -322,6 +334,8 @@ public class MainActivity extends AppCompatActivity implements OnClickListener,O
 				}
 
 	}
+
+
 
 	// switching fragment
 	private void switchFragment(Fragment fragment) {

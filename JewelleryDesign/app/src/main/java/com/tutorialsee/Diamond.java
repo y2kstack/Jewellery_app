@@ -44,12 +44,12 @@ public class Diamond extends Fragment {
         JewelleryModelArrayList.add(new JewelleryModel("Python", R.drawable.n4, "lorem ipsium", "n4a", "n4b"));
         JewelleryModelArrayList.add(new JewelleryModel("Javascript", R.drawable.n5, "lorem ipsium", "n5a", "n5b"));
         JewelleryModelArrayList.add(new JewelleryModel("DSA", R.drawable.n6, "lorem ipsium", "n6a", "n6b"));
-        JewelleryModelArrayList.add(new JewelleryModel("DSA", R.drawable.n1, "lorem ipsium", "n7a", "n7b"));
-        JewelleryModelArrayList.add(new JewelleryModel("JAVA", R.drawable.n2, "lorem ipsium", "n8a", "n8b"));
-        JewelleryModelArrayList.add(new JewelleryModel("C++", R.drawable.n3, "lorem ipsium", "n9a", "n9b"));
-        JewelleryModelArrayList.add(new JewelleryModel("Python", R.drawable.n4, "lorem ipsium", "n10a", "n10b"));
-        JewelleryModelArrayList.add(new JewelleryModel("Javascript", R.drawable.n5, "lorem ipsium", "n11a", "n11b"));
-        JewelleryModelArrayList.add(new JewelleryModel("DSA", R.drawable.n6, "lorem ipsium", "n12a", "n12b"));
+        JewelleryModelArrayList.add(new JewelleryModel("DSA", R.drawable.n7, "lorem ipsium", "n7a", "n7b"));
+        JewelleryModelArrayList.add(new JewelleryModel("JAVA", R.drawable.n8, "lorem ipsium", "n8a", "n8b"));
+        JewelleryModelArrayList.add(new JewelleryModel("C++", R.drawable.n9, "lorem ipsium", "n9a", "n9b"));
+        JewelleryModelArrayList.add(new JewelleryModel("Python", R.drawable.n10, "lorem ipsium", "n10a", "n10b"));
+        JewelleryModelArrayList.add(new JewelleryModel("Javascript", R.drawable.n11, "lorem ipsium", "n11a", "n11b"));
+        JewelleryModelArrayList.add(new JewelleryModel("DSA", R.drawable.n12, "lorem ipsium", "n12a", "n12b"));
 
     }
 

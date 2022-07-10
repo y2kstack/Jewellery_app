@@ -1,13 +1,24 @@
 package com.tutorialsee;
 
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.tutorialsee.R;
 import com.squareup.picasso.Picasso;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
@@ -32,7 +43,9 @@ public class HomeActivtiy extends Fragment implements ViewPager.OnPageChangeList
 	private int currentIndex;
 	LinearLayout ll;
 	LinearLayout user,mycart,home,Offers,more;
-	ImageView s,ss,sss,ssss;
+	ImageView s,ss,sss,ssss, _orddd;
+	private FirebaseAuth mFirebaseAuth;
+
 
 
 	private static final String[] pics = {
@@ -47,6 +60,7 @@ public class HomeActivtiy extends Fragment implements ViewPager.OnPageChangeList
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		MainActivity.lp = 1;
+		mFirebaseAuth = FirebaseAuth.getInstance();
 	}
 
 	@Override
@@ -61,6 +75,22 @@ public class HomeActivtiy extends Fragment implements ViewPager.OnPageChangeList
 		home = (LinearLayout) v.findViewById(R.id.home);
 		mycart = (LinearLayout) v.findViewById(R.id.mycart);
 		user = (LinearLayout) v.findViewById(R.id.user);
+
+		ImageView profileImage = (ImageView) v.findViewById(R.id._orddd);
+
+		mFirebaseAuth = FirebaseAuth.getInstance();
+
+		FirebaseUser account = mFirebaseAuth.getCurrentUser();
+//		if (account != null){
+//			//Display User Image from Google Account
+//			//Objects.requireNonNull() prevents getPhotoUrl() from returning a NullPointerException
+//			String personImage = Objects.requireNonNull(account.getPhotoUrl()).toString();
+//			Glide.with(this).load(personImage).into(profileImage);
+//		}
+
+//		profileImage.setImageDrawable();
+
+
 //		s = (LinearLayout) v.findViewById(R.id.s);
 //		ss = (ImageView) v.findViewById(R.id.ss);
 //		sss = (ImageView) v.findViewById(R.id.sss);
@@ -106,16 +136,16 @@ public class HomeActivtiy extends Fragment implements ViewPager.OnPageChangeList
 			}
 		});
 		
-		user.setOnClickListener(new OnClickListener() {
-
-			@Override
-			public void onClick(View arg0) {
-				Fragment newContent = new LoginActivity();
-				if (newContent != null) {
-					switchFragment(newContent);
-				}
-			}
-		});
+//		user.setOnClickListener(new OnClickListener() {
+//
+//			@Override
+//			public void onClick(View arg0) {
+//				Fragment newContent = new LoginActivity();
+//				if (newContent != null) {
+//					switchFragment(newContent);
+//				}
+//			}
+//		});
 
 		mycart.setOnClickListener(new OnClickListener() {
 
@@ -149,6 +179,24 @@ public class HomeActivtiy extends Fragment implements ViewPager.OnPageChangeList
 
 		return v;
 
+	}
+
+
+	public static Bitmap getBitmapFromURL(String src) {
+		try {
+			Log.e("src",src);
+			URL url = new URL(src);
+			HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+			connection.setDoInput(true);
+			InputStream input = connection.getInputStream();
+			Bitmap myBitmap = BitmapFactory.decodeStream(input);
+			Log.e("Bitmap","returned");
+			return myBitmap;
+		} catch (IOException e) {
+			e.printStackTrace();
+			Log.e("Exception",e.getMessage());
+			return null;
+		}
 	}
 
 
